@@ -3,11 +3,11 @@ import { fallbackSettings } from '../data/fallback';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="py-12 bg-mystique-nuit border-t border-mystique-trait/60 text-mystique-brume text-xs sm:text-sm font-light">
+<footer class="py-12 bg-mystique-encre border-t border-mystique-trait text-mystique-brume text-xs sm:text-sm font-light">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-mystique-trait/40">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-mystique-trait/60">
       <div class="flex items-center gap-3">
-        <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-mystique-accent to-mystique-emerald flex items-center justify-center text-mystique-nuit font-serif font-bold text-sm">
+        <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-mystique-accent to-red-600 flex items-center justify-center text-white font-serif font-bold text-sm shadow-sm">
           A
         </span>
         <span class="font-serif text-lg text-mystique-lune tracking-wide">
@@ -32,7 +32,7 @@ const currentYear = new Date().getFullYear();
     </div>
 
     {/* Avertissement Déontologique et Légal Obligatoire */}
-    <div class="text-center max-w-3xl mx-auto space-y-3 text-xs leading-relaxed text-mystique-brume/80">
+    <div class="text-center max-w-3xl mx-auto space-y-3 text-xs leading-relaxed text-mystique-brume/85">
       <p>
         © {currentYear} {fallbackSettings.practitionerName} — {fallbackSettings.templeAddress}. Tous droits réservés.
       </p>

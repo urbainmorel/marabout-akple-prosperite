@@ -11,7 +11,7 @@ const { testimonials } = Astro.props;
 <section id="avis" class="py-20 sm:py-28 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-mystique-trait bg-mystique-voile/70 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4 shadow-sm">
         <span>Retours d'Expérience Authentiques</span>
       </div>
       <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight mb-4">
@@ -25,22 +25,22 @@ const { testimonials } = Astro.props;
     {/* Grille des Témoignages */}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {testimonials.map((testi) => (
-        <blockquote class="p-8 sm:p-10 rounded-2xl bg-mystique-voile/50 border border-mystique-trait flex flex-col justify-between hover:border-mystique-accent/40 transition-colors">
+        <blockquote class="p-8 sm:p-10 rounded-3xl bg-white border border-mystique-trait flex flex-col justify-between hover:border-mystique-accent/40 shadow-sm hover:shadow-md transition-all">
           <div>
             {/* 5 Étoiles Dorées */}
             <div class="flex items-center gap-1 mb-5" aria-label={`Note de ${testi.rating} sur 5`}>
               {[...Array(testi.rating)].map(() => (
-                <span class="text-amber-400 text-base">★</span>
+                <span class="text-amber-500 text-base">★</span>
               ))}
             </div>
 
-            <p class="font-serif italic font-light text-base sm:text-lg text-mystique-lune/90 leading-relaxed mb-6">
+            <p class="font-serif italic font-light text-base sm:text-lg text-mystique-lune leading-relaxed mb-6">
               « {testi.content} »
             </p>
           </div>
 
           <footer class="flex items-center gap-3 pt-4 border-t border-mystique-trait/60">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-mystique-accent to-mystique-emerald flex items-center justify-center text-mystique-nuit font-serif font-semibold text-sm">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-mystique-accent to-red-600 flex items-center justify-center text-white font-serif font-semibold text-sm shadow-sm">
               {(testi.name || 'A')[0]}
             </div>
             <div>

@@ -5,7 +5,7 @@ import Icons from './Icons.astro';
 <section id="distance" class="py-20 sm:py-28 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mb-16">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-mystique-trait bg-mystique-voile/60 text-mystique-accent text-xs tracking-wider uppercase font-medium mb-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs tracking-wider uppercase font-medium mb-4 shadow-sm">
         <Icons name="map-pin" class="w-3.5 h-3.5 text-mystique-emerald" />
         <span>Deux Modalités d’Accompagnement</span>
       </div>
@@ -18,12 +18,12 @@ import Icons from './Icons.astro';
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-      <!-- Option 1: Au Temple à Ouidah -->
-      <div class="p-8 sm:p-10 rounded-2xl bg-mystique-voile/40 border border-mystique-trait flex flex-col justify-between">
+      {/* Option 1: Au Temple à Ouidah */}
+      <div class="p-8 sm:p-10 rounded-3xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
-            <span class="text-xs uppercase tracking-widest text-mystique-accent font-serif">Option 1</span>
-            <span class="px-3 py-1 rounded-full bg-mystique-accent/10 text-mystique-accent text-xs">Présentiel</span>
+            <span class="text-xs uppercase tracking-widest text-mystique-accent font-serif font-medium">Option 1</span>
+            <span class="px-3 py-1 rounded-full bg-red-50 text-mystique-accent text-xs font-medium border border-red-100">Présentiel</span>
           </div>
           <h3 class="font-serif text-2xl sm:text-3xl text-mystique-lune font-light">
             Au temple sacré à Ouidah
@@ -31,7 +31,7 @@ import Icons from './Icons.astro';
           <p class="text-mystique-brume text-sm sm:text-base font-light leading-relaxed">
             Vous vous déplacez directement au sanctuaire du Marabout AKPLE à Ouidah. Vous participez aux libations et cérémonies en personne, guidé pas à pas au cœur de la terre mère du Vodun.
           </p>
-          <ul class="space-y-3 pt-4 border-t border-mystique-trait/60 text-sm text-mystique-lune/90 font-light">
+          <ul class="space-y-3 pt-4 border-t border-mystique-trait/60 text-sm text-mystique-lune font-light">
             <li class="flex items-start gap-2.5">
               <span class="text-mystique-emerald mt-0.5"><Icons name="check" class="w-4 h-4" /></span>
               <span>Immersion directe dans l'énergie vibratoire des autels ancestraux</span>
@@ -48,12 +48,12 @@ import Icons from './Icons.astro';
         </div>
       </div>
 
-      <!-- Option 2: À Distance pour la Diaspora -->
-      <div class="p-8 sm:p-10 rounded-2xl bg-mystique-voile/40 border border-mystique-trait flex flex-col justify-between relative overflow-hidden">
+      {/* Option 2: À Distance pour la Diaspora */}
+      <div class="p-8 sm:p-10 rounded-3xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
-            <span class="text-xs uppercase tracking-widest text-mystique-emerald font-serif">Option 2</span>
-            <span class="px-3 py-1 rounded-full bg-mystique-emerald/10 text-mystique-emerald text-xs">Diaspora & Étranger</span>
+            <span class="text-xs uppercase tracking-widest text-mystique-emerald font-serif font-medium">Option 2</span>
+            <span class="px-3 py-1 rounded-full bg-emerald-50 text-mystique-emerald text-xs font-medium border border-emerald-100">Diaspora & Étranger</span>
           </div>
           <h3 class="font-serif text-2xl sm:text-3xl text-mystique-lune font-light">
             Cérémonies à distance pour la Diaspora
@@ -61,7 +61,7 @@ import Icons from './Icons.astro';
           <p class="text-mystique-brume text-sm sm:text-base font-light leading-relaxed">
             Vous résidez en France, en Belgique, aux Antilles, aux États-Unis ou ailleurs en Afrique et ne pouvez vous déplacer ? Akple accomplit les rituels en votre nom avec une puissance spirituelle rigoureusement équivalente.
           </p>
-          <ul class="space-y-3 pt-4 border-t border-mystique-trait/60 text-sm text-mystique-lune/90 font-light">
+          <ul class="space-y-3 pt-4 border-t border-mystique-trait/60 text-sm text-mystique-lune font-light">
             <li class="flex items-start gap-2.5">
               <span class="text-mystique-emerald mt-0.5"><Icons name="check" class="w-4 h-4" /></span>
               <span>Consultation du Fâ à distance sur base de vos noms, date de naissance et photo</span>
@@ -80,12 +80,12 @@ import Icons from './Icons.astro';
     </div>
 
     {/* Encart Puissance Métaphysique */}
-    <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-mystique-voile/60 to-mystique-encre border border-mystique-accent/30 flex flex-col sm:flex-row items-center gap-6">
-      <div class="w-12 h-12 rounded-full bg-mystique-accent/20 flex items-center justify-center flex-shrink-0 text-mystique-accent">
+    <div class="p-6 sm:p-8 rounded-3xl bg-white border border-red-200/80 shadow-sm flex flex-col sm:flex-row items-center gap-6">
+      <div class="w-12 h-12 rounded-full bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0 text-mystique-accent">
         <Icons name="badge-check" class="w-6 h-6" />
       </div>
       <div>
-        <h4 class="font-serif text-lg sm:text-xl text-mystique-lune font-light mb-1">
+        <h4 class="font-serif text-lg sm:text-xl text-mystique-lune font-medium mb-1">
           L'esprit ne connaît pas les frontières matérielles
         </h4>
         <p class="text-xs sm:text-sm text-mystique-brume leading-relaxed font-light">

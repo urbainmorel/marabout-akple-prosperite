@@ -2,9 +2,12 @@
 import { fallbackProcessSteps } from '../data/fallback';
 ---
 
-<section id="deroule" class="py-20 sm:py-28 relative">
+<section id="deroule" class="py-20 sm:py-28 relative bg-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4 shadow-sm">
+        <span>Méthode & Accompagnement</span>
+      </div>
       <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight mb-4">
         Comment ça se passe ?
       </h2>
@@ -16,9 +19,9 @@ import { fallbackProcessSteps } from '../data/fallback';
     {/* Grille des 4 Étapes */}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
       {fallbackProcessSteps.map((step) => (
-        <div class="relative p-6 sm:p-8 rounded-2xl bg-mystique-voile/40 border border-mystique-trait hover:border-mystique-accent/50 transition-colors flex flex-col group">
+        <div class="relative p-6 sm:p-8 rounded-3xl bg-white border border-mystique-trait hover:border-mystique-accent/40 shadow-sm hover:shadow-md transition-all flex flex-col group">
           {/* Numéro Médaillon */}
-          <div class="w-12 h-12 rounded-full border border-mystique-accent/60 bg-mystique-nuit flex items-center justify-center font-serif text-xl text-mystique-accent font-light mb-6 shadow-sm group-hover:scale-110 transition-transform">
+          <div class="w-12 h-12 rounded-full border border-red-200 bg-red-50 flex items-center justify-center font-serif text-xl text-mystique-accent font-semibold mb-6 shadow-sm group-hover:scale-110 transition-transform">
             {step.step}
           </div>
 

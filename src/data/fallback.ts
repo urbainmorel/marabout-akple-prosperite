@@ -120,8 +120,8 @@ export const fallbackCeremonies: CeremonyItem[] = [
     imageWebp: '/images/bain-purification-amassi-feuilles-sacrees.webp',
     imageJpg: '/images/bain-purification-amassi-feuilles-sacrees.jpg',
     altText: 'Calebasse traditionnelle d’eau bénite et de feuilles sacrées d’amassi purificateur',
-    width: 750,
-    height: 419,
+    width: 800,
+    height: 600,
   },
   {
     id: 'ceremonie-legba',
@@ -133,8 +133,8 @@ export const fallbackCeremonies: CeremonyItem[] = [
     imageWebp: '/images/ceremonie-legba-gardien-chemins-portes.webp',
     imageJpg: '/images/ceremonie-legba-gardien-chemins-portes.jpg',
     altText: 'Autel consacré de la divinité Legba, gardien des carrefours et des voies de prospérité',
-    width: 750,
-    height: 422,
+    width: 800,
+    height: 600,
   },
   {
     id: 'ceremonie-dan',
@@ -173,7 +173,7 @@ export const fallbackCeremonies: CeremonyItem[] = [
     imageJpg: '/images/entree-temple-akple-ouidah-distance.jpg',
     altText: 'Portail sacré du sanctuaire familial à Ouidah pour l’hommage aux ancêtres',
     width: 800,
-    height: 450,
+    height: 600,
   },
 ];
 
@@ -236,8 +236,8 @@ export const fallbackGallery: GalleryItem[] = [
     caption: 'Feuilles fraîches cueillies au lever du jour pour délester l’aura des lourdeurs.',
     imageWebp: '/images/bain-purification-amassi-feuilles-sacrees.webp',
     imageJpg: '/images/bain-purification-amassi-feuilles-sacrees.jpg',
-    width: 750,
-    height: 419,
+    width: 800,
+    height: 600,
     spanClass: 'col-span-1 row-span-1',
   },
   {
@@ -246,8 +246,8 @@ export const fallbackGallery: GalleryItem[] = [
     caption: 'Consécration des offrandes pour l’ouverture souveraine de toutes les voies.',
     imageWebp: '/images/ceremonie-legba-gardien-chemins-portes.webp',
     imageJpg: '/images/ceremonie-legba-gardien-chemins-portes.jpg',
-    width: 750,
-    height: 422,
+    width: 800,
+    height: 600,
     spanClass: 'col-span-1 row-span-1',
   },
   {
@@ -267,7 +267,7 @@ export const fallbackGallery: GalleryItem[] = [
     imageWebp: '/images/entree-temple-akple-ouidah-distance.webp',
     imageJpg: '/images/entree-temple-akple-ouidah-distance.jpg',
     width: 800,
-    height: 450,
+    height: 600,
     spanClass: 'col-span-2 row-span-1',
   },
 ];

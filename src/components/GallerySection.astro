@@ -3,10 +3,10 @@ import Icons from './Icons.astro';
 import { fallbackGallery } from '../data/fallback';
 ---
 
-<section id="galerie" class="py-20 sm:py-28 relative">
+<section id="galerie" class="py-20 sm:py-28 relative bg-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-mystique-trait bg-mystique-voile/70 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4 shadow-sm">
         <span>Témoignage Visuel des Rituels</span>
       </div>
       <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight mb-4">
@@ -22,7 +22,7 @@ import { fallbackGallery } from '../data/fallback';
       {fallbackGallery.map((item) => (
         <button
           type="button"
-          class="gallery-item group relative rounded-2xl overflow-hidden border border-mystique-trait/60 bg-mystique-voile/40 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent aspect-[4/3] block w-full cursor-zoom-in"
+          class="gallery-item group relative rounded-3xl overflow-hidden border border-mystique-trait bg-gray-50 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent aspect-[4/3] block w-full cursor-zoom-in shadow-sm hover:shadow-xl transition-all duration-300"
           data-img-src={item.imageWebp}
           data-img-alt={item.title}
           data-img-caption={item.caption}
@@ -39,9 +39,9 @@ import { fallbackGallery } from '../data/fallback';
               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
           </picture>
-          <div class="absolute inset-0 bg-gradient-to-t from-mystique-nuit/90 via-mystique-nuit/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-            <h3 class="font-serif text-lg text-mystique-lune font-medium">{item.title}</h3>
-            <p class="text-xs text-mystique-brume font-light mt-1">{item.caption}</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+            <h3 class="font-serif text-lg text-white font-medium">{item.title}</h3>
+            <p class="text-xs text-white/80 font-light mt-1">{item.caption}</p>
           </div>
         </button>
       ))}
@@ -51,7 +51,7 @@ import { fallbackGallery } from '../data/fallback';
   {/* Lightbox Modal Accessible */}
   <div
     id="gallery-lightbox"
-    class="fixed inset-0 z-50 bg-mystique-nuit/95 backdrop-blur-xl hidden place-items-center p-4 sm:p-8"
+    class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl hidden place-items-center p-4 sm:p-8"
     role="dialog"
     aria-modal="true"
     aria-label="Image agrandie du sanctuaire"
@@ -59,17 +59,17 @@ import { fallbackGallery } from '../data/fallback';
     <button
       id="lightbox-close"
       type="button"
-      class="absolute top-6 right-6 p-2 rounded-full text-mystique-brume hover:text-mystique-lune bg-mystique-voile/80 border border-mystique-trait focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent transition-colors"
+      class="absolute top-6 right-6 p-2.5 rounded-full text-white/80 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white transition-colors"
       aria-label="Fermer la vue agrandie"
     >
       <Icons name="close" class="w-6 h-6" />
     </button>
 
     <figure class="max-w-4xl w-full flex flex-col items-center">
-      <div class="w-full max-h-[75vh] flex items-center justify-center overflow-hidden rounded-2xl border border-mystique-trait/60 bg-mystique-voile shadow-2xl">
+      <div class="w-full max-h-[75vh] flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
         <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto object-contain" />
       </div>
-      <figcaption id="lightbox-caption" class="mt-4 text-center font-serif text-lg text-mystique-brume">
+      <figcaption id="lightbox-caption" class="mt-4 text-center font-serif text-lg text-white/90">
       </figcaption>
     </figure>
   </div>
@@ -110,13 +110,12 @@ import { fallbackGallery } from '../data/fallback';
   });
 
   lightboxClose?.addEventListener('click', closeLightbox);
-
   lightbox?.addEventListener('click', (e) => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !lightbox?.classList.contains('hidden')) {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox && !lightbox.classList.contains('hidden')) {
       closeLightbox();
     }
   });

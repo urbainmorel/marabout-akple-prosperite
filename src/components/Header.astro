@@ -10,7 +10,7 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
     <nav class="flex items-center justify-between h-20" aria-label="Navigation principale">
       <!-- Logo -->
       <a href="/#accueil" class="group flex items-center gap-3 text-mystique-lune focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent rounded-lg">
-        <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-mystique-accent to-mystique-emerald flex items-center justify-center text-mystique-nuit font-serif font-bold text-lg shadow-sm">
+        <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-mystique-accent to-red-600 flex items-center justify-center text-white font-serif font-bold text-lg shadow-sm">
           A
         </span>
         <div class="flex flex-col">
@@ -54,9 +54,9 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-mystique-accent/40 bg-mystique-accent/10 hover:bg-mystique-accent hover:text-mystique-nuit text-mystique-lune text-sm tracking-wide font-normal transition-all duration-300 shadow-sm hover:shadow-accent-glow"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-mystique-accent/30 bg-red-50 hover:bg-mystique-accent text-mystique-accent hover:text-white text-sm tracking-wide font-medium transition-all duration-300 shadow-sm hover:shadow-accent-glow group"
         >
-          <Icons name="whatsapp" class="w-4 h-4 text-mystique-emerald group-hover:text-mystique-nuit" />
+          <Icons name="whatsapp" class="w-4 h-4 text-mystique-emerald group-hover:text-white transition-colors" />
           <span>Écrire sur WhatsApp</span>
         </a>
       </div>
@@ -80,7 +80,7 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
   <!-- Mobile Drawer Menu -->
   <div
     id="mobile-menu"
-    class="hidden lg:hidden fixed inset-x-0 top-20 bg-mystique-nuit/95 backdrop-blur-xl border-b border-mystique-trait shadow-2xl px-6 py-6 transition-all duration-300"
+    class="hidden lg:hidden fixed inset-x-0 top-20 bg-white/95 backdrop-blur-xl border-b border-mystique-trait shadow-2xl px-6 py-6 transition-all duration-300"
   >
     <ul class="flex flex-col gap-4 text-base font-light text-mystique-brume">
       <li>
@@ -115,9 +115,9 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-mystique-accent text-mystique-nuit font-medium tracking-wide text-sm shadow-accent-glow"
+          class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-mystique-accent text-white font-medium tracking-wide text-sm shadow-accent-glow"
         >
-          <Icons name="whatsapp" class="w-5 h-5 text-mystique-nuit" />
+          <Icons name="whatsapp" class="w-5 h-5 text-white" />
           <span>Contacter sur WhatsApp</span>
         </a>
       </li>
@@ -134,9 +134,9 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
   // Scroll background blur and border
   const onScroll = () => {
     if (window.scrollY > 40) {
-      header?.classList.add('bg-mystique-nuit/90', 'backdrop-blur-md', 'border-b', 'border-mystique-trait');
+      header?.classList.add('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-mystique-trait', 'shadow-sm');
     } else {
-      header?.classList.remove('bg-mystique-nuit/90', 'backdrop-blur-md', 'border-b', 'border-mystique-trait');
+      header?.classList.remove('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-mystique-trait', 'shadow-sm');
     }
   };
   window.addEventListener('scroll', onScroll, { passive: true });

@@ -8,10 +8,10 @@ interface Props {
 const { ceremonies } = Astro.props;
 ---
 
-<section id="ceremonies" class="py-20 sm:py-28 relative">
+<section id="ceremonies" class="py-20 sm:py-28 relative bg-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-mystique-trait bg-mystique-voile/70 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4 shadow-sm">
         <span>Parcours d'Élévation Spirituelle</span>
       </div>
       <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-mystique-lune tracking-tight mb-6">
@@ -28,12 +28,12 @@ const { ceremonies } = Astro.props;
         const isBig = ceremony.isMain;
         return (
           <article
-            class={`rounded-2xl border border-mystique-trait hover:border-mystique-accent/50 bg-gradient-to-b from-mystique-voile/70 to-mystique-nuit/80 overflow-hidden transition-all duration-300 flex flex-col group ${
+            class={`rounded-3xl border border-mystique-trait hover:border-mystique-accent/40 bg-white shadow-sm hover:shadow-xl overflow-hidden transition-all duration-300 flex flex-col group ${
               isBig ? 'md:col-span-2 lg:col-span-3 grid grid-cols-1 lg:grid-cols-12' : ''
             }`}
           >
-            {/* Image Cérémonie avec Balisage Picture & Lazy Loading */}
-            <div class={`relative overflow-hidden ${isBig ? 'lg:col-span-6 min-h-[300px]' : 'aspect-[16/10]'}`}>
+            {/* Image Cérémonie avec Ratio 4:3 et Balisage Picture */}
+            <div class={`relative overflow-hidden bg-gray-50 ${isBig ? 'lg:col-span-6 min-h-[320px]' : 'aspect-[4/3]'}`}>
               <picture>
                 <source srcset={ceremony.imageWebp} type="image/webp" />
                 <img
@@ -48,7 +48,7 @@ const { ceremonies } = Astro.props;
                 />
               </picture>
               <div class="absolute top-4 left-4">
-                <span class="px-3 py-1 rounded-full bg-mystique-nuit/90 border border-mystique-trait text-mystique-accent text-xs font-serif tracking-wider">
+                <span class="px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-sm border border-mystique-trait text-mystique-accent text-xs font-serif font-medium shadow-sm">
                   Étape {ceremony.stepNumber}
                 </span>
               </div>
@@ -66,7 +66,7 @@ const { ceremonies } = Astro.props;
               </div>
 
               <div class="pt-4 border-t border-mystique-trait/60">
-                <p class="text-xs sm:text-sm text-mystique-lune/90 font-light">
+                <p class="text-xs sm:text-sm text-mystique-lune font-light">
                   <strong class="text-mystique-emerald font-medium">Idéal pour : </strong>
                   {ceremony.idealFor}
                 </p>

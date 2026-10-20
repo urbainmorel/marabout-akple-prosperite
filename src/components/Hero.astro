@@ -5,63 +5,104 @@ import { fallbackSettings } from '../data/fallback';
 const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite ouvrir les chemins de ma réussite et solliciter une première consultation de prospérité.')}`;
 ---
 
-<section id="accueil" class="relative min-h-[92vh] flex items-center pt-28 pb-16 overflow-hidden">
-  {/* L'Astre Mystique Respirant (Cosmic glowing orb from the mystique template) */}
-  <div
-    class="absolute right-[-10vw] top-1/2 -translate-y-1/2 w-[min(65vw,650px)] aspect-square rounded-full pointer-events-none select-none z-0 opacity-80 sm:opacity-90 animate-respire"
-    style="background: radial-gradient(circle at 35% 32%, #f3efff 0%, #c8bdff 18%, #6d5fd0 48%, #1c1640 74%, transparent 76%);"
-    aria-hidden="true"
-  >
-    <div class="absolute -inset-[9%] rounded-full border border-mystique-trait/50" />
-    <div class="absolute -inset-[22%] rounded-full border border-mystique-accent/10" />
-  </div>
-
-  {/* Subtle Background Ambience Overlay */}
-  <div class="absolute inset-0 bg-gradient-to-r from-mystique-nuit via-mystique-nuit/85 to-transparent z-0 pointer-events-none" />
+<section id="accueil" class="relative min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden bg-gradient-to-b from-white via-mystique-encre to-white">
+  {/* Lueur d'ambiance douce en arrière-plan */}
+  <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none" />
 
   <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-    <div class="max-w-2xl">
-      {/* Badge Tradition */}
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-mystique-trait bg-mystique-voile/70 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-6 shadow-sm">
-        <Icons name="badge-check" class="w-4 h-4 text-mystique-emerald" />
-        <span>Haut Dignitaire du Culte Vodun • Ouidah</span>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      {/* Colonne Gauche : Titre, Promesse & Appel à l'action */}
+      <div class="lg:col-span-7 max-w-2xl">
+        {/* Badge Tradition */}
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-6 shadow-sm">
+          <Icons name="badge-check" class="w-4 h-4 text-mystique-emerald" />
+          <span>Haut Dignitaire du Culte Vodun • Ouidah</span>
+        </div>
+
+        {/* Titre Principal */}
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-mystique-lune leading-[1.08] tracking-tight mb-6">
+          Ouvrez les chemins de votre réussite.
+        </h1>
+
+        {/* Description / Accroche */}
+        <p class="text-base sm:text-xl text-mystique-brume font-light leading-relaxed mb-8 max-w-xl">
+          Puissants rituels traditionnels pour attirer la prospérité, la chance et la richesse avec le Marabout AKPLE, haut dignitaire du culte Vodun à Ouidah.
+        </p>
+
+        {/* Actions */}
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-mystique-accent hover:bg-mystique-accentHover text-white font-medium tracking-wide text-base transition-all duration-300 shadow-accent-glow hover:scale-[1.02]"
+          >
+            <Icons name="whatsapp" class="w-5 h-5 text-white" />
+            <span>Écrire sur WhatsApp</span>
+          </a>
+
+          <a
+            href="#ceremonies"
+            class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-mystique-trait hover:border-mystique-accent/50 bg-white hover:bg-mystique-encre text-mystique-lune text-base font-light transition-all duration-300 shadow-sm"
+          >
+            <span>Découvrir les rituels</span>
+            <Icons name="arrow-right" class="w-4 h-4 text-mystique-accent" />
+          </a>
+        </div>
+
+        {/* Micro-réassurance */}
+        <div class="flex items-center gap-3 text-xs sm:text-sm text-mystique-brume">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-mystique-emerald animate-pulse" />
+          <span>Réponse rapide • 100 % confidentiel • Première consultation gratuite</span>
+        </div>
       </div>
 
-      {/* Titre Principal */}
-      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-mystique-lune leading-[1.08] tracking-tight mb-6">
-        Ouvrez les chemins de votre réussite.
-      </h1>
+      {/* Colonne Droite : L'Astre Solaire Rouge et l'Image du Sanctuaire au-dessus */}
+      <div class="lg:col-span-5 flex items-center justify-center relative">
+        {/* Conteneur relatif centré de la sphère et de la photo */}
+        <div class="relative w-full max-w-[460px] flex items-center justify-center py-6 sm:py-10">
+          {/* Disque ou Sphère Dégradé Rouge (Astre respirant avec halos concentriques) */}
+          <div
+            class="absolute inset-0 m-auto w-[min(85vw,420px)] aspect-square rounded-full pointer-events-none select-none z-0 animate-respire opacity-90"
+            style="background: radial-gradient(circle at 35% 32%, #fee2e2 0%, #fca5a5 24%, #ef4444 54%, rgba(220, 38, 38, 0.35) 76%, transparent 82%);"
+            aria-hidden="true"
+          >
+            {/* Anneaux d'orbite sacrés */}
+            <div class="absolute -inset-[7%] rounded-full border border-red-200/60" />
+            <div class="absolute -inset-[15%] rounded-full border border-red-100/50" />
+          </div>
 
-      {/* Description / Accroche */}
-      <p class="text-base sm:text-xl text-mystique-brume font-light leading-relaxed mb-8 max-w-xl">
-        Puissants rituels traditionnels pour attirer la prospérité, la chance et la richesse avec le Marabout AKPLE, haut dignitaire du culte Vodun à Ouidah.
-      </p>
-
-      {/* Actions */}
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-mystique-accent hover:bg-mystique-accentHover text-mystique-nuit font-medium tracking-wide text-base transition-all duration-300 shadow-accent-glow hover:scale-[1.02]"
-        >
-          <Icons name="whatsapp" class="w-5 h-5 text-mystique-nuit" />
-          <span>Écrire sur WhatsApp</span>
-        </a>
-
-        <a
-          href="#ceremonies"
-          class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-mystique-trait hover:border-mystique-accent/50 bg-mystique-voile/40 hover:bg-mystique-voile text-mystique-lune text-base font-light transition-all duration-300"
-        >
-          <span>Découvrir les rituels</span>
-          <Icons name="arrow-right" class="w-4 h-4 text-mystique-accent" />
-        </a>
-      </div>
-
-      {/* Micro-réassurance */}
-      <div class="flex items-center gap-3 text-xs sm:text-sm text-mystique-brume/90">
-        <span class="inline-block w-2 h-2 rounded-full bg-mystique-emerald animate-pulse" />
-        <span>Réponse rapide • 100 % confidentiel • Première consultation gratuite</span>
+          {/* Image du Sanctuaire placée au-dessus du disque / sphère dégradé */}
+          <div class="relative z-10 w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group">
+            <picture>
+              <source srcset="/images/hero-temple-vodun-akple.webp" type="image/webp" />
+              <img
+                src="/images/hero-temple-vodun-akple.jpg"
+                alt="Sanctuaire ancestral du Marabout AKPLE à Ouidah — Cérémonies Vodun de prospérité"
+                title="Sanctuaire du Marabout AKPLE à Ouidah au Bénin"
+                width="1000"
+                height="558"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full h-auto aspect-[16/10] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              />
+            </picture>
+            <div class="p-3.5 sm:p-4 bg-white/95 backdrop-blur-sm border-t border-gray-100 flex items-center justify-between">
+              <div>
+                <span class="block font-serif text-sm sm:text-base text-mystique-lune font-medium leading-snug">
+                  Sanctuaire Vodun d’Ouidah
+                </span>
+                <span class="block text-[11px] text-mystique-brume font-light">
+                  Berceau historique des rituels de prospérité
+                </span>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-red-50 text-mystique-accent text-xs font-serif font-medium border border-red-100 flex-shrink-0">
+                Bénin
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
