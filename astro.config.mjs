@@ -7,7 +7,7 @@ const projectId = process.env.PUBLIC_SANITY_PROJECT_ID || 'akple-prosperite';
 const dataset = process.env.PUBLIC_SANITY_DATASET || 'production';
 
 export default defineConfig({
-  site: 'https://prosperite.maraboutakple.com',
+  site: 'https://www.grand-marabout-akple.com',
   output: 'static',
   integrations: [
     react(),

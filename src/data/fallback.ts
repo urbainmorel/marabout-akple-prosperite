@@ -58,7 +58,7 @@ export const fallbackSettings: SiteSettings = {
   phoneNumberBJ: '+229 01 90 87 13 12',
   templeAddress: 'Ouidah, Bénin (cité historique du Vodun)',
   hours: 'Lundi à Samedi : 08h00 - 18h00 (UTC+1)',
-  siteUrl: 'https://prosperite.maraboutakple.com',
+  siteUrl: 'https://www.grand-marabout-akple.com',
   metaTitle: 'Cérémonies de Prospérité Vodun — Marabout AKPLE, Haut Dignitaire à Ouidah',
   metaDescription: 'Puissants rituels ancestraux pour débloquer vos finances, attirer la chance et pérenniser l’abondance avec le Marabout AKPLE à Ouidah (Bénin) et à distance pour la diaspora.',
 };
