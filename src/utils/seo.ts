@@ -50,7 +50,7 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
           'itemOffered': {
             '@type': 'Service',
             'name': 'Consultation du Fâ (Diagnostic Spirituel)',
-            'description': 'Lecture approfondie des blocages et détermination de la voie d’élévation.',
+            'description': 'Identification précise de l’origine de vos blocages financiers.',
           },
         },
         {
@@ -58,7 +58,7 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
           'itemOffered': {
             '@type': 'Service',
             'name': 'Bain de Purification Amassi',
-            'description': 'Purification aux feuilles sacrées pour dissoudre les énergies négatives.',
+            'description': 'Nettoyage des mauvaises ondes et de la poisse aux feuilles sacrées.',
           },
         },
         {
@@ -66,7 +66,7 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
           'itemOffered': {
             '@type': 'Service',
             'name': 'Cérémonie de Legba (Ouverture des Portes)',
-            'description': 'Déblocage des carrefours financiers et levée des verrous occultes.',
+            'description': 'Ouverture des portes du travail, des affaires et de l’argent.',
           },
         },
         {
@@ -74,7 +74,7 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
           'itemOffered': {
             '@type': 'Service',
             'name': 'Cérémonie de Dan (Fixation de l’Abondance)',
-            'description': 'Attirer et pérenniser la fortune et l’harmonie matérielle.',
+            'description': 'Attirer la richesse et stabiliser vos rentrées d’argent.',
           },
         },
       ],
