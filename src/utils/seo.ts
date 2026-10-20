@@ -77,6 +77,14 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
             'description': 'Attirer la richesse et stabiliser vos rentrées d’argent.',
           },
         },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Hommage aux Ancêtres (Protection des Acquis)',
+            'description': 'Bénédiction de votre lignée pour sécuriser vos réussites.',
+          },
+        },
       ],
     },
   };

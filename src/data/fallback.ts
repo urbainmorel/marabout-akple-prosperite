@@ -16,7 +16,7 @@ export interface CeremonyItem {
   stepNumber: number;
   title: string;
   shortDescription: string;
-  idealFor: string;
+  idealFor?: string;
   imageWebp: string;
   imageJpg: string;
   altText: string;
@@ -101,22 +101,19 @@ export const fallbackCeremonies: CeremonyItem[] = [
     stepNumber: 1,
     title: 'La Consultation du Fâ : Comprendre vos blocages',
     shortDescription:
-      'Le Fâ identifie l’origine exacte de vos blocages d’argent. Le dignitaire Akple lit votre situation et vous indique le rituel précis pour ouvrir votre chance. Rien n’est fait au hasard.',
-    idealFor: 'Savoir précisément pourquoi votre argent ou vos projets bloquent avant d’agir.',
+      'Le Fâ identifie l’origine exacte de vos blocages financiers. Le dignitaire Akple lit votre destinée et vous indique le rituel précis pour ouvrir votre chance.',
     imageWebp: '/images/consultation-fa-plateau-divination.webp',
     imageJpg: '/images/consultation-fa-plateau-divination.jpg',
     altText: 'Plateau sacré de divination du Fâ avec noix de palme et chapelet traditionnel',
-    width: 700,
-    height: 467,
-    isMain: true,
+    width: 800,
+    height: 600,
   },
   {
     id: 'bain-purification',
     stepNumber: 2,
     title: 'Le Bain de Purification (Amassi) : Repartir à zéro',
     shortDescription:
-      'Préparé avec des feuilles sacrées, ce bain nettoie la poisse, la jalousie et les mauvaises ondes qui vous collent. Vous repartez l’esprit libéré pour attirer la chance.',
-    idealFor: 'Ceux qui se sentent lourds, bloqués ou poursuivis par la malchance.',
+      'Préparé avec des feuilles sacrées, ce bain dissout la poisse, la jalousie et les énergies négatives. Il libère votre esprit pour attirer le succès.',
     imageWebp: '/images/bain-purification-amassi-feuilles-sacrees.webp',
     imageJpg: '/images/bain-purification-amassi-feuilles-sacrees.jpg',
     altText: 'Calebasse traditionnelle d’eau bénite et de feuilles sacrées d’amassi purificateur',
@@ -128,8 +125,7 @@ export const fallbackCeremonies: CeremonyItem[] = [
     stepNumber: 3,
     title: 'La Cérémonie de Legba : Ouvrir les chemins',
     shortDescription:
-      'Legba est le maître des carrefours et des opportunités. Ce rituel fait sauter les blocages invisibles et ouvre grand les portes du travail, du commerce et des rentrées d’argent.',
-    idealFor: 'Ceux qui ont l’impression de frapper contre des portes fermées.',
+      'Gardien des carrefours, Legba lève les obstacles invisibles sur votre route. Il ouvre grand les portes du travail, du commerce et des rentrées d’argent.',
     imageWebp: '/images/ceremonie-legba-gardien-chemins-portes.webp',
     imageJpg: '/images/ceremonie-legba-gardien-chemins-portes.jpg',
     altText: 'Autel consacré de la divinité Legba, gardien des carrefours et des voies de prospérité',
@@ -141,8 +137,7 @@ export const fallbackCeremonies: CeremonyItem[] = [
     stepNumber: 4,
     title: 'La Cérémonie de Dan : Garder et multiplier l’argent',
     shortDescription:
-      'Dan est la divinité de la richesse et de l’abondance. Ce rituel attire les gains financiers et stoppe les dépenses imprévues pour garder et faire fructifier votre argent.',
-    idealFor: 'Ceux qui gagnent de l’argent mais le perdent aussitôt sans comprendre.',
+      'Divinité de la richesse, Dan attire l’abondance matérielle et stoppe les dépenses imprévues. Il permet de conserver et faire fructifier votre argent.',
     imageWebp: '/images/ceremonie-dan-serpent-arc-en-ciel-richesse.webp',
     imageJpg: '/images/ceremonie-dan-serpent-arc-en-ciel-richesse.jpg',
     altText: 'Symbole sacré de Dan le serpent arc-en-ciel pour la prospérité pérenne et la fortune',
@@ -150,25 +145,11 @@ export const fallbackCeremonies: CeremonyItem[] = [
     height: 600,
   },
   {
-    id: 'ceremonie-mami-wata',
-    stepNumber: 5,
-    title: 'La Cérémonie de Mami Wata : Attirer la clientèle',
-    shortDescription:
-      'Reine des eaux et de la séduction commerciale, Mami Wata attire les clients vers vous. Ce rituel booste vos ventes, remplit vos caisses et fait prospérer votre activité.',
-    idealFor: 'Commerçants, vendeurs, prestataires et chefs d’entreprise.',
-    imageWebp: '/images/ceremonie-vodun-prosperite-richesse.webp',
-    imageJpg: '/images/ceremonie-vodun-prosperite-richesse.jpg',
-    altText: 'Offrandes sacrées et éléments rituels d’eau et de parfums dédiés à Mami Wata',
-    width: 800,
-    height: 597,
-  },
-  {
     id: 'hommage-ancetres',
-    stepNumber: 6,
+    stepNumber: 5,
     title: 'L’Hommage aux Ancêtres : Protéger vos acquis',
     shortDescription:
-      'Pour réussir sans risque de rechute, il faut la bénédiction de vos racines. Ce rituel honore vos ancêtres pour protéger votre foyer et sécuriser vos biens dans le temps.',
-    idealFor: 'Poser des bases solides, sécuriser ses gains et protéger sa famille.',
+      'Ce rituel traditionnel honore vos racines pour attirer la bénédiction de votre lignée. Il protège votre foyer et sécurise vos réussites dans la durée.',
     imageWebp: '/images/entree-temple-akple-ouidah-distance.webp',
     imageJpg: '/images/entree-temple-akple-ouidah-distance.jpg',
     altText: 'Portail sacré du sanctuaire familial à Ouidah pour l’hommage aux ancêtres',
