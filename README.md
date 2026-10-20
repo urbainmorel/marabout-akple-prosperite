@@ -2,6 +2,10 @@
 
 Site web officiel dédié aux **Cérémonies et Rituels de Prospérité, de Chance et de Richesse** du **Marabout AKPLE**, Haut Dignitaire du Culte Vodun à Ouidah (Bénin).
 
+- 🌐 **Domaine Officiel** : [https://www.grand-marabout-akple.com](https://www.grand-marabout-akple.com)
+- ⚡ **URL Cloudflare Pages** : [https://marabout-akple-prosperite.pages.dev](https://marabout-akple-prosperite.pages.dev)
+- 📦 **Dépôt GitHub Public** : [https://github.com/urbainmorel/marabout-akple-prosperite](https://github.com/urbainmorel/marabout-akple-prosperite)
+
 ---
 
 ## 🌟 Identité & Concept du Projet
