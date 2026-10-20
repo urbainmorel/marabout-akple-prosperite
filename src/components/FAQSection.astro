@@ -1,0 +1,48 @@
+---
+import type { FaqItem } from '../data/fallback';
+
+interface Props {
+  faqs: FaqItem[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<section id="faq" class="py-20 sm:py-28 relative">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-mystique-trait bg-mystique-voile/70 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4">
+        <span>Transparence & Vérité</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight mb-4">
+        Vos questions, nos réponses
+      </h2>
+      <p class="text-mystique-brume text-base font-light leading-relaxed">
+        Toutes les réponses indispensables pour aborder votre démarche spirituelle avec sérénité et discernement.
+      </p>
+    </div>
+
+    {/* Accordéon FAQ */}
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <details
+          class="group rounded-2xl bg-mystique-voile/40 border border-mystique-trait/60 overflow-hidden transition-all duration-300"
+          open={index === 0}
+        >
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none select-none text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent">
+            <span class="font-serif text-lg sm:text-xl text-mystique-lune font-medium group-hover:text-mystique-accent transition-colors">
+              {faq.question}
+            </span>
+            <span class="w-8 h-8 rounded-full border border-mystique-trait flex items-center justify-center text-mystique-accent text-xl font-light transition-transform duration-300 group-open:rotate-45 flex-shrink-0">
+              +
+            </span>
+          </summary>
+
+          <div class="px-6 pb-6 pt-1 text-sm sm:text-base text-mystique-brume font-light leading-relaxed border-t border-mystique-trait/30">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

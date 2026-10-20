@@ -1,0 +1,70 @@
+---
+import Icons from './Icons.astro';
+import { fallbackTrustMetrics, fallbackTrustPoints } from '../data/fallback';
+---
+
+<section id="confiance" class="py-20 sm:py-28 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-12 sm:mb-16">
+      <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight mb-4">
+        Pourquoi nous faire confiance
+      </h2>
+      <p class="text-mystique-brume text-base sm:text-lg font-light leading-relaxed">
+        Une pratique ancestrale authentique exercée à Ouidah, berceau historique du Vodun, où la rigueur des rituels et l'intégrité morale constituent la règle suprême.
+      </p>
+    </div>
+
+    {/* Grille des 3 Chiffres Clés */}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      {fallbackTrustMetrics.map((metric) => (
+        <div class="p-6 sm:p-8 rounded-2xl bg-mystique-voile/40 border border-mystique-trait hover:border-mystique-accent/40 transition-colors">
+          <strong class="block font-serif text-3xl sm:text-4xl text-mystique-accent font-light mb-2">
+            {metric.number}
+          </strong>
+          <span class="block text-mystique-lune font-medium text-base mb-2">
+            {metric.label}
+          </span>
+          <p class="text-sm text-mystique-brume leading-relaxed font-light">
+            {metric.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    {/* Bannière Visuelle avec Image Réelle Optimisée */}
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-2xl bg-mystique-voile/30 border border-mystique-trait overflow-hidden">
+      <div class="lg:col-span-7 p-6 sm:p-10 space-y-4">
+        <h3 class="font-serif text-2xl sm:text-3xl text-mystique-lune font-light">
+          Un sanctuaire ancré dans la lignée et la vérité
+        </h3>
+        <ul class="space-y-3.5 pt-2">
+          {fallbackTrustPoints.map((point) => (
+            <li class="flex items-start gap-3 text-mystique-brume text-sm sm:text-base font-light">
+              <span class="mt-0.5 text-mystique-emerald flex-shrink-0">
+                <Icons name="check" class="w-4 h-4" />
+              </span>
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="lg:col-span-5 h-full min-h-[280px] relative overflow-hidden">
+        <picture>
+          <source srcset="/images/ceremonie-vodun-prosperite-richesse.webp" type="image/webp" />
+          <img
+            src="/images/ceremonie-vodun-prosperite-richesse.jpg"
+            alt="Cérémonie Vodun traditionnelle pour la prospérité et la richesse célébrée au Bénin"
+            title="Cérémonie Vodun à Ouidah — Fête du 10 janvier et célébration des divinités de l'abondance"
+            width="800"
+            height="597"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover object-center"
+          />
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-t from-mystique-nuit/80 via-transparent to-transparent lg:hidden" />
+      </div>
+    </div>
+  </div>
+</section>

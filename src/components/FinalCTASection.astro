@@ -1,0 +1,77 @@
+---
+import Icons from './Icons.astro';
+import { fallbackSettings } from '../data/fallback';
+
+const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite faire le premier pas et entamer mon accompagnement de prospérité.')}`;
+---
+
+<section id="contact" class="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-mystique-nuit via-mystique-encre to-mystique-nuit border-t border-mystique-trait/50">
+  {/* Halo Lumineux Supérieur */}
+  <div
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(90vw,900px)] h-72 rounded-full pointer-events-none opacity-25 select-none"
+    style="background: radial-gradient(ellipse at 50% 0%, rgba(169, 155, 255, 0.45), transparent 70%);"
+    aria-hidden="true"
+  />
+
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-mystique-trait bg-mystique-voile/70 text-mystique-emerald text-xs font-medium tracking-wider uppercase mb-6 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-mystique-emerald animate-pulse" />
+      <span>Consultation Ouverte</span>
+    </div>
+
+    <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-mystique-lune tracking-tight max-w-3xl mx-auto mb-6 leading-tight">
+      Votre chemin peut s’ouvrir. Faites le premier pas aujourd'hui.
+    </h2>
+
+    <p class="font-serif italic text-xl sm:text-2xl text-mystique-accent font-light mb-4">
+      « La chance se provoque, l’abondance se prépare. »
+    </p>
+
+    <p class="text-mystique-brume text-base sm:text-lg font-light leading-relaxed max-w-xl mx-auto mb-10">
+      Que vous soyez au Bénin ou établi n'importe où dans le monde, le Marabout AKPLE vous écoute dans le secret le plus absolu.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-mystique-emerald hover:bg-mystique-emeraldHover text-mystique-nuit font-semibold tracking-wide text-base transition-all duration-300 shadow-emerald-glow hover:scale-[1.02]"
+      >
+        <Icons name="whatsapp" class="w-5 h-5 text-mystique-nuit" />
+        <span>Consulter le Marabout AKPLE sur WhatsApp</span>
+      </a>
+
+      <a
+        href={`tel:${fallbackSettings.phoneNumberBJ.replace(/\s+/g, '')}`}
+        class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-mystique-trait hover:border-mystique-accent/50 bg-mystique-voile/50 hover:bg-mystique-voile text-mystique-lune text-base font-light transition-all duration-300"
+      >
+        <Icons name="phone" class="w-4 h-4 text-mystique-accent" />
+        <span>Appeler : {fallbackSettings.phoneNumberBJ}</span>
+      </a>
+    </div>
+
+    {/* 4 Blocs d'Informations Pratiques */}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+      <div class="p-5 rounded-2xl bg-mystique-voile/40 border border-mystique-trait">
+        <strong class="font-serif text-base text-mystique-lune block mb-1">WhatsApp Direct</strong>
+        <span class="text-xs sm:text-sm text-mystique-brume font-mono">{fallbackSettings.phoneNumberBJ}</span>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-mystique-voile/40 border border-mystique-trait">
+        <strong class="font-serif text-base text-mystique-lune block mb-1">Appel Téléphonique</strong>
+        <span class="text-xs sm:text-sm text-mystique-brume font-mono">{fallbackSettings.phoneNumberBJ}</span>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-mystique-voile/40 border border-mystique-trait">
+        <strong class="font-serif text-base text-mystique-lune block mb-1">Sanctuaire à Ouidah</strong>
+        <span class="text-xs sm:text-sm text-mystique-brume">Ouidah, Bénin (adresse transmise au 1er échange)</span>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-mystique-voile/40 border border-mystique-trait">
+        <strong class="font-serif text-base text-mystique-lune block mb-1">Horaires d'Accueil</strong>
+        <span class="text-xs sm:text-sm text-mystique-brume">{fallbackSettings.hours}</span>
+      </div>
+    </div>
+  </div>
+</section>

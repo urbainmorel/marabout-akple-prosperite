@@ -1,0 +1,68 @@
+---
+import Icons from './Icons.astro';
+import { fallbackSettings } from '../data/fallback';
+
+const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite ouvrir les chemins de ma réussite et solliciter une première consultation de prospérité.')}`;
+---
+
+<section id="accueil" class="relative min-h-[92vh] flex items-center pt-28 pb-16 overflow-hidden">
+  {/* L'Astre Mystique Respirant (Cosmic glowing orb from the mystique template) */}
+  <div
+    class="absolute right-[-10vw] top-1/2 -translate-y-1/2 w-[min(65vw,650px)] aspect-square rounded-full pointer-events-none select-none z-0 opacity-80 sm:opacity-90 animate-respire"
+    style="background: radial-gradient(circle at 35% 32%, #f3efff 0%, #c8bdff 18%, #6d5fd0 48%, #1c1640 74%, transparent 76%);"
+    aria-hidden="true"
+  >
+    <div class="absolute -inset-[9%] rounded-full border border-mystique-trait/50" />
+    <div class="absolute -inset-[22%] rounded-full border border-mystique-accent/10" />
+  </div>
+
+  {/* Subtle Background Ambience Overlay */}
+  <div class="absolute inset-0 bg-gradient-to-r from-mystique-nuit via-mystique-nuit/85 to-transparent z-0 pointer-events-none" />
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="max-w-2xl">
+      {/* Badge Tradition */}
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-mystique-trait bg-mystique-voile/70 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-6 shadow-sm">
+        <Icons name="badge-check" class="w-4 h-4 text-mystique-emerald" />
+        <span>Haut Dignitaire du Culte Vodun • Ouidah</span>
+      </div>
+
+      {/* Titre Principal */}
+      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-mystique-lune leading-[1.08] tracking-tight mb-6">
+        Ouvrez les chemins de votre réussite.
+      </h1>
+
+      {/* Description / Accroche */}
+      <p class="text-base sm:text-xl text-mystique-brume font-light leading-relaxed mb-8 max-w-xl">
+        Puissants rituels traditionnels pour attirer la prospérité, la chance et la richesse avec le Marabout AKPLE, haut dignitaire du culte Vodun à Ouidah.
+      </p>
+
+      {/* Actions */}
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-mystique-accent hover:bg-mystique-accentHover text-mystique-nuit font-medium tracking-wide text-base transition-all duration-300 shadow-accent-glow hover:scale-[1.02]"
+        >
+          <Icons name="whatsapp" class="w-5 h-5 text-mystique-nuit" />
+          <span>Écrire sur WhatsApp</span>
+        </a>
+
+        <a
+          href="#ceremonies"
+          class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-mystique-trait hover:border-mystique-accent/50 bg-mystique-voile/40 hover:bg-mystique-voile text-mystique-lune text-base font-light transition-all duration-300"
+        >
+          <span>Découvrir les rituels</span>
+          <Icons name="arrow-right" class="w-4 h-4 text-mystique-accent" />
+        </a>
+      </div>
+
+      {/* Micro-réassurance */}
+      <div class="flex items-center gap-3 text-xs sm:text-sm text-mystique-brume/90">
+        <span class="inline-block w-2 h-2 rounded-full bg-mystique-emerald animate-pulse" />
+        <span>Réponse rapide • 100 % confidentiel • Première consultation gratuite</span>
+      </div>
+    </div>
+  </div>
+</section>

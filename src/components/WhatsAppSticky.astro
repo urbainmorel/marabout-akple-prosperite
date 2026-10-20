@@ -1,0 +1,25 @@
+---
+import Icons from './Icons.astro';
+import { fallbackSettings } from '../data/fallback';
+
+const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je vous écris pour une consultation sur les cérémonies de prospérité.')}`;
+---
+
+<aside aria-label="Contact rapide WhatsApp" class="fixed right-5 bottom-5 z-40">
+  <a
+    href={whatsappUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="group relative flex items-center justify-center w-14 h-14 rounded-full bg-mystique-emerald text-mystique-nuit shadow-emerald-glow hover:scale-110 active:scale-95 transition-all duration-300 animate-pulseGlow"
+    aria-label="Discuter directement avec le Marabout AKPLE sur WhatsApp"
+  >
+    <Icons name="whatsapp" class="w-7 h-7 text-mystique-nuit" />
+
+    {/* Tooltip flottant au hover */}
+    <span
+      class="absolute right-full mr-3.5 px-3 py-1.5 rounded-xl bg-mystique-nuit/90 backdrop-blur-md border border-mystique-trait text-mystique-lune text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-xl"
+    >
+      Écrire au Marabout AKPLE (Direct)
+    </span>
+  </a>
+</aside>

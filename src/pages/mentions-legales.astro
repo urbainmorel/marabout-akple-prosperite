@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { fallbackSettings } from '../data/fallback';
+---
+
+<Layout
+  title={`Mentions Légales — ${fallbackSettings.practitionerName}`}
+  description="Mentions légales, éditeur du site, hébergement Cloudflare et cadre déontologique du Sanctuaire Vodun Marabout AKPLE à Ouidah."
+>
+  <div class="py-24 sm:py-32 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="mb-8 text-xs text-mystique-brume">
+      <a href="/" class="hover:text-mystique-lune transition-colors">Accueil</a>
+      <span class="mx-2">/</span>
+      <span class="text-mystique-accent">Mentions Légales</span>
+    </nav>
+
+    <h1 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight mb-8">
+      Mentions Légales
+    </h1>
+
+    <div class="space-y-8 text-mystique-brume text-sm sm:text-base font-light leading-relaxed">
+      <section class="p-6 rounded-2xl bg-mystique-voile/40 border border-mystique-trait space-y-3">
+        <h2 class="font-serif text-xl sm:text-2xl text-mystique-lune font-medium">1. Éditeur du site</h2>
+        <p>
+          Le présent site Internet est édité sous la responsabilité spirituelle et morale du :<br />
+          <strong class="text-mystique-lune font-medium">{fallbackSettings.practitionerName}</strong><br />
+          Titre : {fallbackSettings.practitionerTitle}<br />
+          Adresse du sanctuaire : {fallbackSettings.templeAddress}<br />
+          Téléphone / WhatsApp officiel : {fallbackSettings.phoneNumberBJ}
+        </p>
+      </section>
+
+      <section class="p-6 rounded-2xl bg-mystique-voile/40 border border-mystique-trait space-y-3">
+        <h2 class="font-serif text-xl sm:text-2xl text-mystique-lune font-medium">2. Hébergement & Infrastructure</h2>
+        <p>
+          Le site est hébergé sur le réseau mondial ultra-sécurisé de :<br />
+          <strong class="text-mystique-lune font-medium">Cloudflare Inc.</strong><br />
+          101 Townsend St, San Francisco, CA 94107, États-Unis.<br />
+          Site web : <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer" class="text-mystique-accent underline">www.cloudflare.com</a>
+        </p>
+      </section>
+
+      <section class="p-6 rounded-2xl bg-mystique-voile/40 border border-mystique-trait space-y-3">
+        <h2 class="font-serif text-xl sm:text-2xl text-mystique-lune font-medium">3. Propriété intellectuelle</h2>
+        <p>
+          L'ensemble des contenus, photographies réelles du sanctuaire, textes, chartes graphiques et présentations de rituels sont protégés par les lois internationales sur la propriété intellectuelle. Toute reproduction ou utilisation commerciale sans autorisation expresse est interdite.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-2xl bg-mystique-voile/40 border border-mystique-trait space-y-3">
+        <h2 class="font-serif text-xl sm:text-2xl text-mystique-lune font-medium">4. Avertissement Déontologique</h2>
+        <p>
+          Les cérémonies de prospérité constituent un accompagnement spirituel et énergétique issu des savoirs traditionnels du Fâ et du panthéon Vodun. Elles ne se substituent jamais à la médecine, à la justice ou à un conseil d'investissement financier agréé.
+        </p>
+      </section>
+    </div>
+  </div>
+</Layout>

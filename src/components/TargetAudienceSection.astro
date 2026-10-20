@@ -1,0 +1,61 @@
+---
+import Icons from './Icons.astro';
+import { fallbackTargetAudience } from '../data/fallback';
+---
+
+<section id="pourqui" class="py-20 sm:py-28 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Cibles Textuelles -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-mystique-trait bg-mystique-voile/60 text-mystique-accent text-xs tracking-wider uppercase font-medium">
+          <Icons name="badge-check" class="w-3.5 h-3.5 text-mystique-emerald" />
+          <span>Accompagnement Universel</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight">
+          À qui s'adressent nos cérémonies ?
+        </h2>
+
+        <p class="text-mystique-brume text-base sm:text-lg font-light leading-relaxed">
+          Toute personne qui travaille dignement mais ressent un blocage invisible, une jalousie ou une fuite constante d'argent trouvera au sanctuaire une réponse ciblée et respectueuse.
+        </p>
+
+        <ul class="space-y-3.5 pt-2">
+          {fallbackTargetAudience.map((target) => (
+            <li class="flex items-start gap-3 p-3.5 rounded-xl bg-mystique-voile/40 border border-mystique-trait/50 text-mystique-lune/90 text-sm sm:text-base font-light">
+              <span class="mt-0.5 text-mystique-emerald flex-shrink-0">
+                <Icons name="check-circle" class="w-5 h-5" />
+              </span>
+              <span>{target}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Illustration Parcours Réel Optimisé -->
+      <div class="lg:col-span-5">
+        <div class="relative rounded-2xl overflow-hidden border border-mystique-trait shadow-mystique-card group">
+          <picture>
+            <source srcset="/images/parcours-elevation-spirituelle-prosperite.webp" type="image/webp" />
+            <img
+              src="/images/parcours-elevation-spirituelle-prosperite.jpg"
+              alt="Parcours d’élévation spirituelle et de bénédiction de prospérité au temple Vodun"
+              title="Cérémonie d'ouverture de prospérité et bénédiction par le Marabout Akple"
+              width="720"
+              height="540"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-auto object-cover object-center group-hover:scale-105 transition-transform duration-700"
+            />
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-mystique-nuit/90 via-transparent to-transparent flex items-end p-6">
+            <p class="text-xs text-mystique-brume italic">
+              « Chaque esprit qui sollicite le sanctuaire avec respect et sincérité reçoit une voie d'élévation sur-mesure. »
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

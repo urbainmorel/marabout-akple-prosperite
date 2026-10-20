@@ -1,0 +1,96 @@
+---
+import Icons from './Icons.astro';
+import { fallbackSettings } from '../data/fallback';
+---
+
+<section id="dignitaire" class="py-20 sm:py-28 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Portrait Solennel du Dignitaire -->
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <div class="relative max-w-md mx-auto rounded-2xl overflow-hidden border border-mystique-trait shadow-mystique-card group">
+          <picture>
+            <source srcset="/images/marabout-akple-haut-dignitaire-vodun.webp" type="image/webp" />
+            <img
+              src="/images/marabout-akple-haut-dignitaire-vodun.jpg"
+              alt="Marabout AKPLE, Haut Dignitaire du culte Vodun à Ouidah au Bénin"
+              title="Marabout AKPLE — Maître spirituel et dignitaire initié du culte traditionnel Vodun"
+              width="600"
+              height="800"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-auto aspect-[3/4] object-cover object-top group-hover:scale-105 transition-transform duration-700"
+            />
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-mystique-nuit/90 via-transparent to-transparent flex flex-col justify-end p-6">
+            <span class="font-serif text-2xl text-mystique-lune font-light">{fallbackSettings.practitionerName}</span>
+            <span class="text-xs text-mystique-accent tracking-widest uppercase">{fallbackSettings.practitionerTitle}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description & Déontologie -->
+      <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-mystique-trait bg-mystique-voile/60 text-mystique-accent text-xs tracking-wider uppercase font-medium">
+          <Icons name="badge-check" class="w-3.5 h-3.5 text-mystique-emerald" />
+          <span>Tradition et Lignée Ancestrale</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight">
+          Qui est le Marabout AKPLE ?
+        </h2>
+
+        <p class="text-mystique-brume text-base sm:text-lg font-light leading-relaxed">
+          Initié aux secrets les plus profonds du Vodun à Ouidah, le <strong class="text-mystique-lune font-normal">Marabout AKPLE</strong> consacre sa vie depuis plus de trois décennies à guider ceux qui traversent l'épreuve du blocage, du doute ou de la stagnation financière.
+        </p>
+
+        <p class="text-mystique-brume text-base font-light leading-relaxed">
+          Il est le dépositaire scrupuleux d'un sacerdoce transmis ininterrompu au sein de sa famille depuis plusieurs générations d'officiants et de prêtres initiés. Chez lui, point de discours trompeurs ni d'artifices : la parole sacrée du Fâ est délivrée avec vérité, humilité et bienveillance.
+        </p>
+
+        <!-- Les 4 Piliers Déontologiques -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <div class="p-4 rounded-xl bg-mystique-voile/40 border border-mystique-trait flex items-start gap-3">
+            <span class="p-1.5 rounded-lg bg-mystique-accent/10 text-mystique-accent mt-0.5">
+              <Icons name="check" class="w-4 h-4" />
+            </span>
+            <div>
+              <h3 class="text-sm font-medium text-mystique-lune font-serif">Accueil Honnête & Chaleureux</h3>
+              <p class="text-xs text-mystique-brume mt-1">Écoute attentive sans jugement de votre histoire de vie.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-mystique-voile/40 border border-mystique-trait flex items-start gap-3">
+            <span class="p-1.5 rounded-lg bg-mystique-accent/10 text-mystique-accent mt-0.5">
+              <Icons name="shield-check" class="w-4 h-4" />
+            </span>
+            <div>
+              <h3 class="text-sm font-medium text-mystique-lune font-serif">Tradition Sérieuse & Pure</h3>
+              <p class="text-xs text-mystique-brume mt-1">Rituels canoniques conformes aux règles séculaires d'Ouidah.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-mystique-voile/40 border border-mystique-trait flex items-start gap-3">
+            <span class="p-1.5 rounded-lg bg-mystique-accent/10 text-mystique-accent mt-0.5">
+              <Icons name="arrow-right" class="w-4 h-4" />
+            </span>
+            <div>
+              <h3 class="text-sm font-medium text-mystique-lune font-serif">Accompagnement Pas à Pas</h3>
+              <p class="text-xs text-mystique-brume mt-1">Vous n'êtes jamais livré à vous-même avant, pendant et après.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-mystique-voile/40 border border-mystique-trait flex items-start gap-3">
+            <span class="p-1.5 rounded-lg bg-mystique-accent/10 text-mystique-accent mt-0.5">
+              <Icons name="lock" class="w-4 h-4" />
+            </span>
+            <div>
+              <h3 class="text-sm font-medium text-mystique-lune font-serif">Éthique Absolue</h3>
+              <p class="text-xs text-mystique-brume mt-1">Aucune action pour nuire à autrui. Travail pur et protecteur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

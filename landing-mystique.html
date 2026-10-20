@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cérémonies de prospérité Vodun — [Nom du dignitaire], [ville]</title>
+<meta name="description" content="Cérémonies Vodun traditionnelles pour attirer la prospérité, la chance et la richesse, avec [Nom du dignitaire] à [ville], Bénin.">
+<meta name="theme-color" content="#0a0912">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* ===== PERSONNALISATION : changez ces variables ===== */
+:root{
+  --nuit:#0a0912; --encre:#120f1d; --voile:#1b1729;
+  --lune:#efeaf7; --brume:#b4aecb; --trait:rgba(190,175,255,.14);
+  --accent:#a99bff; --accent2:#74d3c4;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--nuit);color:var(--lune);font:300 1.05rem/1.8 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{width:min(1120px,90%);margin-inline:auto}
+section{padding:clamp(4.5rem,11vw,8rem) 0}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:.01em}
+h2{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:1.2rem}
+h3{font-size:1.55rem;font-weight:500;line-height:1.2}
+.lead{color:var(--brume);max-width:58ch}
+.head{margin-bottom:3.5rem}
+.center{text-align:center}.center .lead{margin-inline:auto}
+.fond{background:var(--encre)}
+.btn{display:inline-block;padding:.95rem 2.2rem;border-radius:99px;border:1px solid var(--accent);color:var(--lune);font-weight:400;letter-spacing:.03em;transition:.35s;cursor:pointer;background:none;font:inherit}
+.btn:hover{background:var(--accent);color:var(--nuit);box-shadow:0 0 40px rgba(169,155,255,.35)}
+.btn.plein{background:var(--accent);color:var(--nuit)}
+.btn.plein:hover{background:var(--lune);border-color:var(--lune)}
+
+/* ===== IMAGES : emplacements prêts à remplacer =====
+   Remplacez <div class="ph" ...></div> par <img src="photo.webp" alt="..." loading="lazy">
+   (WebP, moins de 150 Ko). Le texte alt est déjà dans aria-label : retirez role et aria-label après remplacement. */
+.im{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--trait);background:var(--g,var(--voile));aspect-ratio:var(--r,3/2)}
+.im img{width:100%;height:100%;object-fit:cover}
+.ph{position:absolute;inset:0;display:grid;place-items:center;padding:1rem;text-align:center;font-size:.8rem;line-height:1.4;color:var(--brume)}
+.ph::after{content:attr(data-brief)}
+.g1{--g:radial-gradient(circle at 30% 40%,#4a3fb0,#151030 72%)}
+.g2{--g:linear-gradient(160deg,#27585f,#0c1a24)}
+.g3{--g:radial-gradient(circle at 70% 30%,#7766e8,#1a1438 66%)}
+.g4{--g:linear-gradient(200deg,#38285e,#0e0b1c)}
+
+/* Navigation */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:.4s}
+header.scroll{background:rgba(10,9,18,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--trait)}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:var(--serif);font-size:1.5rem;letter-spacing:.04em}
+.menu{display:flex;gap:2rem;list-style:none;font-size:.93rem;color:var(--brume)}
+.menu a:hover{color:var(--lune)}
+.burger{display:none;background:none;border:0;color:var(--lune);font-size:1.6rem;cursor:pointer}
+
+/* 1. En-tête */
+.hero{min-height:100svh;display:grid;align-items:center;position:relative;padding-top:110px;overflow:hidden;
+  background:linear-gradient(90deg,var(--nuit) 20%,rgba(10,9,18,.55)),var(--hero-img,none) center/cover}
+.astre{position:absolute;right:-8vw;top:50%;width:min(60vw,620px);aspect-ratio:1;transform:translateY(-50%);border-radius:50%;
+  background:radial-gradient(circle at 35% 32%,#f3efff 0,#c8bdff 18%,#6d5fd0 48%,#1c1640 74%,transparent 76%);
+  box-shadow:0 0 140px 30px rgba(130,110,255,.28);animation:respire 9s ease-in-out infinite}
+.astre::before,.astre::after{content:"";position:absolute;border-radius:50%;border:1px solid var(--trait)}
+.astre::before{inset:-9%}.astre::after{inset:-22%;border-color:rgba(190,175,255,.07)}
+@keyframes respire{50%{transform:translateY(-52%) scale(1.03);box-shadow:0 0 190px 50px rgba(130,110,255,.38)}}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(2.8rem,7.4vw,5.8rem);max-width:13ch;margin-bottom:1.6rem;animation:entre 1.6s .2s both cubic-bezier(.2,.7,.2,1)}
+.hero p{font-size:1.18rem;color:var(--brume);max-width:46ch;margin-bottom:2.4rem;animation:entre 1.6s .55s both cubic-bezier(.2,.7,.2,1)}
+.hero .act{animation:entre 1.6s .9s both cubic-bezier(.2,.7,.2,1)}
+.hero small{display:block;margin-top:1rem;color:var(--brume);font-size:.9rem}
+@keyframes entre{from{opacity:0;transform:translateY(24px)}}
+
+/* 2. Confiance */
+.conf{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:3rem}
+.conf strong{display:block;font:300 clamp(2.4rem,5vw,3.6rem)/1.1 var(--serif);color:var(--accent)}
+.conf span{color:var(--brume);font-size:.97rem;display:block;margin-top:.3rem}
+.bande{--r:21/6}
+
+/* 3. Reconnaissance */
+.duo{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.constat{list-style:none;margin:2rem 0}
+.constat li{font:italic 300 clamp(1.4rem,2.6vw,1.9rem)/1.35 var(--serif);padding:.9rem 0 .9rem 1.4rem;border-left:1px solid var(--accent)}
+.lead b{color:var(--lune);font-weight:600}
+
+/* 4. Dignitaire */
+.portrait{--r:4/5;max-width:440px;margin-inline:auto;width:100%}
+
+/* 5. Cérémonies */
+.grille3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.carte{border:1px solid var(--trait);border-radius:18px;overflow:hidden;background:linear-gradient(160deg,var(--voile),transparent 75%);transition:.4s}
+.carte:hover{border-color:var(--accent)}
+.carte .im{border:0;border-radius:0}
+.corps{padding:1.8rem 1.8rem 2rem}
+.corps p{color:var(--brume);margin-top:.8rem;font-size:.97rem}
+.corps .ideal{color:var(--lune);border-top:1px solid var(--trait);padding-top:.9rem;margin-top:1.2rem;font-size:.93rem}
+.corps .ideal b{color:var(--accent2);font-weight:600}
+.carte.grande{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.carte.grande .im{height:100%;aspect-ratio:auto;min-height:280px}
+.carte.grande .corps{padding:clamp(2rem,4vw,3.5rem)}
+.note{margin-top:2.4rem;color:var(--brume);font-style:italic;font-size:.95rem;text-align:center}
+
+/* 6. Déroulé */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:e;position:relative;margin-bottom:3.5rem}
+.etapes::before{content:"";position:absolute;top:26px;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.5}
+.etape{counter-increment:e;position:relative}
+.etape::before{content:counter(e);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--nuit);border:1px solid var(--accent);font:1.4rem var(--serif);margin-bottom:1.3rem;position:relative}
+.etape p{color:var(--brume);font-size:.97rem;margin-top:.5rem}
+
+/* 7. Pour qui */
+.valeurs{list-style:none;margin-top:1.8rem;display:grid;gap:.9rem}
+.valeurs li{padding-left:1.8rem;position:relative;color:var(--brume)}
+.valeurs li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:10px;border-radius:50%;background:var(--accent2);box-shadow:0 0 14px var(--accent2)}
+
+/* Galerie */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:1rem}
+.photo{position:relative;border:0;border-radius:14px;overflow:hidden;cursor:zoom-in;background:var(--g);padding:0;color:var(--lune);font:inherit}
+.photo.h{grid-row:span 2}.photo.l{grid-column:span 2}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo span{position:absolute;inset:auto 0 0;padding:1.2rem 1rem .8rem;text-align:left;font:1.15rem var(--serif);background:linear-gradient(transparent,rgba(5,4,12,.85));opacity:0;transition:.4s}
+.photo:hover span,.photo:focus-visible span{opacity:1}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(5,4,12,.94);display:none;place-items:center;padding:4vw}
+.lb.on{display:grid}
+.lb figure{width:min(900px,100%)}
+.lb .vue{aspect-ratio:3/2;border-radius:14px;overflow:hidden;background:var(--g)}
+.lb img{width:100%;height:100%;object-fit:cover}
+.lb figcaption{text-align:center;margin-top:1rem;font:1.4rem var(--serif);color:var(--brume)}
+.lb button{position:absolute;top:1.2rem;right:1.6rem;background:none;border:0;color:var(--lune);font-size:2.4rem;cursor:pointer}
+
+/* 8. Témoignages */
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+blockquote{padding:2.2rem;border-radius:18px;background:var(--voile);border:1px solid var(--trait)}
+blockquote p{font:italic 300 1.3rem/1.5 var(--serif);margin-bottom:1.4rem}
+blockquote footer{display:flex;align-items:center;gap:.9rem;font-size:.9rem;color:var(--brume)}
+.av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+
+/* 9. FAQ */
+.faq{max-width:780px;margin-inline:auto}
+details{border-bottom:1px solid var(--trait);padding:1.4rem 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;font:400 1.4rem/1.3 var(--serif)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:1.8rem;line-height:1;transition:.3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--brume);margin-top:1rem}
+
+/* 10. Appel final */
+.appel{text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(120,100,240,.3),transparent 60%),var(--encre)}
+.appel h2{max-width:20ch;margin-inline:auto;margin-bottom:2rem}
+.contact{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:3.5rem 0;text-align:left}
+.contact div{padding:1.4rem;border:1px solid var(--trait);border-radius:14px;font-size:.95rem;color:var(--brume)}
+.contact b{display:block;font:500 1.3rem var(--serif);color:var(--lune);margin-bottom:.3rem}
+
+/* Pied de page */
+footer.pied{padding:2.6rem 0;border-top:1px solid var(--trait);color:var(--brume);font-size:.88rem;text-align:center}
+footer.pied p{max-width:70ch;margin-inline:auto}
+.wa{position:fixed;right:1.4rem;bottom:1.4rem;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--accent2);color:var(--nuit);box-shadow:0 0 30px rgba(116,211,196,.4);font-size:1.5rem}
+
+@media(max-width:900px){
+  .menu{position:fixed;inset:76px 0 auto;flex-direction:column;background:var(--nuit);padding:2rem 5%;gap:1.4rem;border-bottom:1px solid var(--trait);display:none}
+  .menu.on{display:flex}.burger{display:block}
+  .astre{opacity:.45;right:-30vw}
+  .duo,.grille3,.avis,.carte.grande{grid-template-columns:1fr}
+  .conf{grid-template-columns:1fr;gap:1.4rem}
+  .carte.grande .im{aspect-ratio:3/2;min-height:0}
+  .etapes{grid-template-columns:1fr 1fr}.etapes::before{display:none}
+  .galerie{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}
+  .contact{grid-template-columns:1fr 1fr}
+  .bande{--r:16/7}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <nav class="wrap">
+    <a class="logo" href="#accueil">[Nom du temple]</a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <ul class="menu">
+      <li><a href="#ceremonies">Cérémonies</a></li>
+      <li><a href="#deroule">Déroulé</a></li>
+      <li><a href="#pourqui">Pour qui</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#avis">Témoignages</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- 1. EN-TÊTE — IMAGE 1 : ajoutez style="--hero-img:url(hero.webp)" sur la section (lever de soleil sur le temple) -->
+<section class="hero" id="accueil" aria-label="Lever de soleil sur le temple de [Nom]">
+  <div class="astre" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>Ouvrez les chemins de votre réussite.</h1>
+    <p>Cérémonies Vodun traditionnelles pour attirer la prospérité, la chance et la richesse. Avec [Nom du dignitaire], [titre] à [ville], Bénin.</p>
+    <div class="act">
+      <a class="btn plein" href="https://wa.me/229XXXXXXXX">📲 Écrire sur WhatsApp</a>
+      <small>Réponse rapide. Échange 100 % confidentiel.</small>
+    </div>
+  </div>
+</section>
+
+<!-- 2. POURQUOI NOUS FAIRE CONFIANCE -->
+<section class="fond" id="confiance">
+  <div class="wrap">
+    <div class="head"><h2>Pourquoi nous faire confiance</h2></div>
+    <div class="conf">
+      <div><strong>[X] ans</strong><span>de pratique</span></div>
+      <div><strong>[X] personnes</strong><span>accompagnées</span></div>
+      <div><strong>10 janvier</strong><span>Une tradition vivante : le Vodun est fêté chaque année au Bénin, jour de fête nationale.</span></div>
+    </div>
+    <figure class="im bande g1" role="img" aria-label="Fête du Vodun au Bénin"><div class="ph" data-brief="IMAGE 2 · Fête du 10 janvier à Ouidah ou cérémonie du temple"></div></figure>
+  </div>
+</section>
+
+<!-- 3. VOUS VOUS RECONNAISSEZ ? -->
+<section id="reconnaitre">
+  <div class="wrap duo">
+    <div>
+      <h2>Vous vous reconnaissez ?</h2>
+      <ul class="constat">
+        <li>Vous travaillez dur. Pourtant, l’argent entre… et ressort aussi vite.</li>
+        <li>Votre commerce démarre bien, puis il se bloque.</li>
+        <li>Les portes s’ouvrent pour les autres, mais pas pour vous.</li>
+      </ul>
+      <p class="lead">Vous n’êtes pas seul. Beaucoup de personnes vivent la même chose. Dans la tradition Vodun, on dit parfois qu’un chemin est fermé, ou qu’on s’est éloigné de son destin.</p>
+      <p class="lead" style="margin-top:1rem"><b>La bonne nouvelle : cela se travaille.</b> Il existe des cérémonies pour remettre de l’ordre et rouvrir la route.</p>
+    </div>
+    <figure class="im g3" style="--r:4/5" role="img" aria-label="Commerçante au marché, prête à réussir"><div class="ph" data-brief="IMAGE 3 · Commerçante devant son étal ou jeune entrepreneur devant sa boutique"></div></figure>
+  </div>
+</section>
+
+<!-- 4. QUI EST [NOM] ? -->
+<section class="fond" id="dignitaire">
+  <div class="wrap duo">
+    <figure class="im portrait g4" role="img" aria-label="[Nom], [titre] du culte Vodun"><div class="ph" data-brief="IMAGE 4 · Portrait du dignitaire en tenue traditionnelle devant le temple"></div></figure>
+    <div>
+      <h2>Qui est [Nom du dignitaire] ?</h2>
+      <p class="lead">[Nom], [titre : par exemple Bokonon, Hounon, chef de couvent], reçoit depuis [X] ans les personnes qui cherchent un meilleur avenir. Il (ou elle) garde une tradition reçue de ses ancêtres depuis [X] générations.</p>
+      <p class="lead" style="margin-top:1rem">Ici, pas de grandes promesses vides. Vous trouvez un accueil honnête, une tradition sérieuse et un vrai accompagnement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CÉRÉMONIES -->
+<section id="ceremonies">
+  <div class="wrap">
+    <div class="head center"><h2>Nos cérémonies de prospérité</h2><p class="lead">Chaque personne est différente. Chaque cérémonie a un but précis. Voici les plus demandées.</p></div>
+    <div class="grille3">
+      <article class="carte grande">
+        <figure class="im g1" role="img" aria-label="Consultation du Fâ"><div class="ph" data-brief="IMAGE 5 · Plateau de divination, noix de palme, cauris, mains du dignitaire"></div></figure>
+        <div class="corps"><h3>La consultation du Fâ : le point de départ</h3>
+          <p>Le Fâ est la grande consultation du Vodun. Le dignitaire lit votre situation : vos blocages, vos forces, ce qui vous attend. Ensuite, il vous dit quelle cérémonie est faite pour vous. C’est comme un plan avant de construire une maison.</p>
+          <p class="ideal"><b>Idéal pour :</b> toute personne qui veut comprendre où elle en est avant d’agir.</p></div>
+      </article>
+      <article class="carte">
+        <figure class="im g2" role="img" aria-label="Autel de Legba, gardien des chemins"><div class="ph" data-brief="IMAGE 6 · Autel de Legba à l’entrée d’une maison ou d’un carrefour"></div></figure>
+        <div class="corps"><h3>La cérémonie de Legba : ouvrir les chemins</h3>
+          <p>Legba est le gardien des routes et des portes. On le salue en premier, car sans lui, rien ne s’ouvre. Cette cérémonie sert à enlever ce qui bloque votre route.</p>
+          <p class="ideal"><b>Idéal pour :</b> ceux qui sentent que « rien n’avance » malgré leurs efforts.</p></div>
+      </article>
+      <article class="carte">
+        <figure class="im g3" role="img" aria-label="Dan, le serpent arc-en-ciel, symbole de richesse"><div class="ph" data-brief="IMAGE 7 · Python ou serpent sacré, ou arc-en-ciel au-dessus d’un champ"></div></figure>
+        <div class="corps"><h3>La cérémonie de Dan : faire circuler l’abondance</h3>
+          <p>Dan est le serpent arc-en-ciel. Il représente la richesse qui circule et qui dure. Cette cérémonie aide à attirer l’abondance et à la garder.</p>
+          <p class="ideal"><b>Idéal pour :</b> ceux qui veulent que l’argent reste, grandisse et ne s’envole plus.</p></div>
+      </article>
+      <article class="carte">
+        <figure class="im g2" role="img" aria-label="Offrandes à Mami Wata"><div class="ph" data-brief="IMAGE 8 · Eau claire, miroir, tissus blancs et bleus, parfums et fleurs"></div></figure>
+        <div class="corps"><h3>La cérémonie de Mami Wata : attirer clients et chance</h3>
+          <p>Mami Wata est l’esprit de l’eau, de la beauté et du commerce. On la prie pour attirer les clients, la chance et les bonnes affaires.</p>
+          <p class="ideal"><b>Idéal pour :</b> commerçants, vendeuses, coiffeurs, restaurateurs, hôteliers.</p></div>
+      </article>
+      <article class="carte">
+        <figure class="im g4" role="img" aria-label="Gu, le maître du fer et du travail"><div class="ph" data-brief="IMAGE 9 · Forgeron au travail, outils en fer, mains qui construisent"></div></figure>
+        <div class="corps"><h3>La cérémonie de Gu : réussir par le travail</h3>
+          <p>Gu est le maître du fer et de l’outil. Il donne du courage, de la force et de la réussite dans le travail.</p>
+          <p class="ideal"><b>Idéal pour :</b> artisans, mécaniciens, soudeurs, chauffeurs, entrepreneurs, étudiants en examen.</p></div>
+      </article>
+      <article class="carte">
+        <figure class="im g2" role="img" aria-label="Feuilles sacrées du bain purificateur"><div class="ph" data-brief="IMAGE 10 · Feuilles vertes fraîches dans une calebasse remplie d’eau"></div></figure>
+        <div class="corps"><h3>Le bain de feuilles : repartir à neuf</h3>
+          <p>Le bain de feuilles (l’<i>amassi</i>) lave les mauvaises énergies, la fatigue et les poids du passé. On en sort léger, avec l’esprit clair, prêt à recevoir.</p>
+          <p class="ideal"><b>Idéal pour :</b> ceux qui se sentent bloqués, fatigués ou « chargés ».</p></div>
+      </article>
+      <article class="carte">
+        <figure class="im g1" role="img" aria-label="Hommage aux ancêtres"><div class="ph" data-brief="IMAGE 11 · Libation d’eau versée au sol, bougies, famille réunie"></div></figure>
+        <div class="corps"><h3>L’hommage aux ancêtres : la bénédiction de la famille</h3>
+          <p>On n’avance jamais seul. Cette cérémonie honore les ancêtres et demande leur bénédiction pour vous et votre famille.</p>
+          <p class="ideal"><b>Idéal pour :</b> les familles, et ceux qui veulent bâtir quelque chose de solide.</p></div>
+      </article>
+    </div>
+    <p class="note">Les offrandes (boissons, aliments, noix de cola, etc.) sont choisies avec vous pendant la consultation. Vous savez tout avant de commencer.</p>
+  </div>
+</section>
+
+<!-- 6. COMMENT ÇA SE PASSE ? -->
+<section class="fond" id="deroule">
+  <div class="wrap">
+    <div class="head"><h2>Comment ça se passe ?</h2><p class="lead">Quatre étapes simples.</p></div>
+    <div class="etapes">
+      <div class="etape"><h3>Vous nous écrivez</h3><p>Sur WhatsApp, ou vous venez directement au temple.</p></div>
+      <div class="etape"><h3>Consultation du Fâ</h3><p>On écoute votre situation et on vous dit quelle cérémonie vous convient.</p></div>
+      <div class="etape"><h3>La cérémonie</h3><p>Vous êtes guidé pas à pas. Le prix et les offrandes sont annoncés avant. Pas de surprise. [à confirmer avec le dignitaire]</p></div>
+      <div class="etape"><h3>Le suivi</h3><p>Vous recevez des conseils pour la suite, et vous pouvez revenir donner des nouvelles.</p></div>
+    </div>
+    <figure class="im bande g4" role="img" aria-label="Entrée du temple de [Nom]"><div class="ph" data-brief="IMAGE 12 · Entrée du temple ou main qui ouvre une porte de lumière"></div></figure>
+  </div>
+</section>
+
+<!-- 7. POUR QUI ? -->
+<section id="pourqui">
+  <div class="wrap duo">
+    <div>
+      <h2>Pour qui ?</h2>
+      <ul class="valeurs">
+        <li>Commerçants et vendeuses de marché</li>
+        <li>Entrepreneurs et chefs d’entreprise</li>
+        <li>Étudiants et candidats à un concours</li>
+        <li>Personnes qui cherchent un emploi</li>
+        <li>Familles qui veulent plus de paix et d’abondance</li>
+        <li>Membres de la diaspora [consultation à distance : à confirmer]</li>
+      </ul>
+    </div>
+    <figure class="im g3" role="img" aria-label="Des personnes de tous métiers accompagnées"><div class="ph" data-brief="IMAGE 13 · Montage de visages souriants ou de métiers variés (accord écrit requis)"></div></figure>
+  </div>
+</section>
+
+<!-- GALERIE (facultative) -->
+<section class="fond" id="galerie">
+  <div class="wrap">
+    <div class="head center"><h2>Galerie</h2><p class="lead">Le temple, les objets et les moments de cérémonie. Touchez une image pour l’agrandir.</p></div>
+    <!-- Remplacez <div class="ph"></div> par <img src="photo.webp" alt="..." loading="lazy"> -->
+    <div class="galerie">
+      <button class="photo l g1"><div class="ph" data-brief="Photo 1"></div><span>Légende 1</span></button>
+      <button class="photo h g2"><div class="ph" data-brief="Photo 2"></div><span>Légende 2</span></button>
+      <button class="photo g3"><div class="ph" data-brief="Photo 3"></div><span>Légende 3</span></button>
+      <button class="photo g4"><div class="ph" data-brief="Photo 4"></div><span>Légende 4</span></button>
+      <button class="photo h g2"><div class="ph" data-brief="Photo 5"></div><span>Légende 5</span></button>
+      <button class="photo l g1"><div class="ph" data-brief="Photo 6"></div><span>Légende 6</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- 8. TÉMOIGNAGES — uniquement de vrais témoignages, avec l'accord des personnes -->
+<section id="avis">
+  <div class="wrap">
+    <div class="head center"><h2>Ils en parlent</h2></div>
+    <div class="avis">
+      <blockquote><p>« [Témoignage réel n°1] »</p><footer><i class="av"></i>[Prénom], [ville], [métier]</footer></blockquote>
+      <blockquote><p>« [Témoignage réel n°2] »</p><footer><i class="av"></i>[Prénom], [ville], [métier]</footer></blockquote>
+      <blockquote><p>« [Témoignage réel n°3] »</p><footer><i class="av"></i>[Prénom], [ville], [métier]</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- 9. QUESTIONS -->
+<section class="fond" id="faq">
+  <div class="wrap">
+    <div class="head center"><h2>Vos questions, nos réponses</h2></div>
+    <div class="faq">
+      <details><summary>Le résultat est-il garanti ?</summary><p>Non, et personne ne peut le garantir honnêtement. Nous ouvrons les chemins, mais c’est vous qui avancez. La cérémonie accompagne votre travail, elle ne le remplace pas.</p></details>
+      <details><summary>Faut-il être initié(e) ou croire au Vodun ?</summary><p>Non. Il faut venir avec respect et avec un cœur sincère.</p></details>
+      <details><summary>Je suis chrétien(ne) ou musulman(e). Puis-je venir ?</summary><p>On est reçu ici avec respect et sans jugement. Au Bénin, beaucoup de personnes respectent plusieurs traditions.</p></details>
+      <details><summary>Combien ça coûte ?</summary><p>Le prix dépend de la cérémonie et des offrandes. Il est annoncé clairement avant de commencer. [ajouter une fourchette si le dignitaire est d’accord]</p></details>
+      <details><summary>Mes informations restent-elles privées ?</summary><p>Oui. Ce que vous confiez ici reste ici.</p></details>
+      <details><summary>Faites-vous des cérémonies pour nuire à quelqu’un ?</summary><p>Non, jamais. Nous travaillons pour votre bien, pas contre les autres.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. APPEL FINAL -->
+<section class="appel" id="contact">
+  <div class="wrap">
+    <h2>Votre chemin peut s’ouvrir. Faites le premier pas aujourd’hui.</h2>
+    <a class="btn plein" href="https://wa.me/229XXXXXXXX">📲 Écrire sur WhatsApp</a>
+    <div class="contact">
+      <div><b>WhatsApp</b>[numéro]</div>
+      <div><b>Appeler</b>[numéro]</div>
+      <div><b>Venir au temple</b>[adresse, ville]<br>[horaires]</div>
+      <div><b>Paiement</b>Espèces ou Mobile Money [à confirmer]</div>
+    </div>
+    <figure class="im bande g1" role="img" aria-label="Un chemin qui s’ouvre vers la réussite"><div class="ph" data-brief="IMAGE 14 · Coucher de soleil sur une route qui s’ouvre vers l’horizon"></div></figure>
+  </div>
+</section>
+</main>
+
+<footer class="pied"><div class="wrap">
+  <p>© [année] [Nom du dignitaire]. Les cérémonies sont un accompagnement spirituel et traditionnel. Les résultats dépendent de chaque personne et de sa situation. Elles ne remplacent pas un avis médical, juridique ou financier.</p>
+</div></footer>
+
+<a class="wa" href="https://wa.me/229XXXXXXXX" aria-label="Écrire sur WhatsApp">💬</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image agrandie">
+  <button aria-label="Fermer">×</button>
+  <figure><div class="vue" id="vue"></div><figcaption id="cap"></figcaption></figure>
+</div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+addEventListener("scroll",()=>$("#top").classList.toggle("scroll",scrollY>40),{passive:true});
+const b=$(".burger"),m=$(".menu");
+b.onclick=()=>{b.setAttribute("aria-expanded",m.classList.toggle("on"))};
+$$(".menu a").forEach(a=>a.onclick=()=>m.classList.remove("on"));
+// Galerie : agrandissement
+const lb=$("#lb"),vue=$("#vue");
+$$(".photo").forEach(p=>p.onclick=()=>{
+  const img=p.querySelector("img");
+  vue.style.background=getComputedStyle(p).backgroundImage;
+  vue.innerHTML=img?`<img src="${img.src}" alt="${img.alt}">`:"";
+  $("#cap").textContent=p.querySelector("span").textContent;
+  lb.classList.add("on");lb.querySelector("button").focus();
+});
+const ferme=()=>lb.classList.remove("on");
+lb.onclick=e=>{if(e.target===lb||e.target.tagName==="BUTTON")ferme()};
+addEventListener("keydown",e=>e.key==="Escape"&&ferme());
+</script>
+</body>
+</html>

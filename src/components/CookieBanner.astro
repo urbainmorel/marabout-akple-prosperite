@@ -1,0 +1,52 @@
+---
+---
+
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 inset-x-0 z-50 p-4 sm:p-6 bg-mystique-nuit/95 backdrop-blur-xl border-t border-mystique-trait/60 shadow-2xl transition-all duration-300 hidden"
+  role="region"
+  aria-label="Consentement relatif aux cookies"
+>
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-xs sm:text-sm text-mystique-brume font-light text-center sm:text-left">
+      Ce site utilise des cookies strictement nécessaires à son bon fonctionnement et à des mesures anonymes de fréquentation dans le respect de votre vie privée.
+      <a href="/politique-confidentialite" class="underline hover:text-mystique-lune ml-1">En savoir plus</a>.
+    </p>
+
+    <div class="flex items-center gap-3 flex-shrink-0">
+      <button
+        id="cookie-accept"
+        type="button"
+        class="px-5 py-2 rounded-full bg-mystique-accent text-mystique-nuit text-xs font-medium hover:bg-mystique-accentHover transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent"
+      >
+        Accepter
+      </button>
+      <button
+        id="cookie-refuse"
+        type="button"
+        class="px-4 py-2 rounded-full border border-mystique-trait text-mystique-brume text-xs font-light hover:text-mystique-lune hover:border-mystique-accent/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent"
+      >
+        Continuer sans accepter
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const refuseBtn = document.getElementById('cookie-refuse');
+
+  const consent = localStorage.getItem('cookie_consent');
+  if (!consent && banner) {
+    banner.classList.remove('hidden');
+  }
+
+  const hideBanner = (val: string) => {
+    localStorage.setItem('cookie_consent', val);
+    banner?.classList.add('hidden');
+  };
+
+  acceptBtn?.addEventListener('click', () => hideBanner('accepted'));
+  refuseBtn?.addEventListener('click', () => hideBanner('refused'));
+</script>

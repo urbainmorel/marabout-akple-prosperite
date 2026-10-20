@@ -1,0 +1,102 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppSticky from '../components/WhatsAppSticky.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+import Analytics from '../components/Analytics.astro';
+import { generateProfessionalServiceSchema, generateWebSiteSchema } from '../utils/seo';
+import { fallbackSettings } from '../data/fallback';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  jsonLd?: Record<string, any> | Record<string, any>[];
+}
+
+const {
+  title = fallbackSettings.metaTitle,
+  description = fallbackSettings.metaDescription,
+  canonical = Astro.url.href,
+  ogImage = `${fallbackSettings.siteUrl}/images/og-image.jpg`,
+  jsonLd,
+} = Astro.props;
+
+const siteUrl = fallbackSettings.siteUrl;
+const fullCanonical = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`;
+const defaultOrgSchema = generateProfessionalServiceSchema(fullCanonical);
+const defaultSiteSchema = generateWebSiteSchema(siteUrl);
+
+const schemasToRender = [
+  defaultSiteSchema,
+  defaultOrgSchema,
+  ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []),
+];
+---
+
+<!doctype html>
+<html lang="fr" class="scroll-smooth bg-mystique-nuit text-mystique-lune selection:bg-mystique-accent selection:text-mystique-nuit">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0a0912" />
+    <meta name="msapplication-TileColor" content="#0a0912" />
+    <meta name="generator" content={Astro.generator} />
+
+    {/* SEO Fondamental & Indexation */}
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={fullCanonical} />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    {/* Open Graph / Réseaux Sociaux */}
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:site_name" content="Sanctuaire Vodun Marabout AKPLE" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sanctuaire Vodun Marabout AKPLE — Cérémonies de Prospérité et d'Abondance" />
+
+    {/* Twitter Cards */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    {/* Google Fonts Typographie Mystique : Cormorant Garamond & Manrope */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    {/* Schémas JSON-LD Schema.org */}
+    {schemasToRender.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+
+    <Analytics />
+  </head>
+
+  <body class="font-sans font-light leading-relaxed tracking-normal antialiased min-h-screen flex flex-col bg-mystique-nuit text-mystique-lune overflow-x-hidden">
+    <Header />
+
+    <main id="main-content" class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+    <WhatsAppSticky />
+    <CookieBanner />
+  </body>
+</html>

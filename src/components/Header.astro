@@ -1,0 +1,159 @@
+---
+import Icons from './Icons.astro';
+import { fallbackSettings } from '../data/fallback';
+
+const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite obtenir une consultation pour une cérémonie de prospérité.')}`;
+---
+
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-20" aria-label="Navigation principale">
+      <!-- Logo -->
+      <a href="/#accueil" class="group flex items-center gap-3 text-mystique-lune focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent rounded-lg">
+        <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-mystique-accent to-mystique-emerald flex items-center justify-center text-mystique-nuit font-serif font-bold text-lg shadow-sm">
+          A
+        </span>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl sm:text-2xl tracking-wide font-normal group-hover:text-mystique-accent transition-colors">
+            Marabout AKPLE
+          </span>
+          <span class="text-[10px] uppercase tracking-widest text-mystique-brume/75 font-sans">
+            Sanctuaire Vodun d’Ouidah
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-light text-mystique-brume tracking-wide">
+        <li>
+          <a href="/#ceremonies" class="hover:text-mystique-lune transition-colors py-1">Cérémonies</a>
+        </li>
+        <li>
+          <a href="/#confiance" class="hover:text-mystique-lune transition-colors py-1">Confiance</a>
+        </li>
+        <li>
+          <a href="/#distance" class="hover:text-mystique-lune transition-colors py-1">Au Temple ou à Distance</a>
+        </li>
+        <li>
+          <a href="/#deroule" class="hover:text-mystique-lune transition-colors py-1">Déroulé</a>
+        </li>
+        <li>
+          <a href="/#galerie" class="hover:text-mystique-lune transition-colors py-1">Galerie</a>
+        </li>
+        <li>
+          <a href="/#avis" class="hover:text-mystique-lune transition-colors py-1">Témoignages</a>
+        </li>
+        <li>
+          <a href="/#faq" class="hover:text-mystique-lune transition-colors py-1">FAQ</a>
+        </li>
+      </ul>
+
+      <!-- CTA Desktop -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-mystique-accent/40 bg-mystique-accent/10 hover:bg-mystique-accent hover:text-mystique-nuit text-mystique-lune text-sm tracking-wide font-normal transition-all duration-300 shadow-sm hover:shadow-accent-glow"
+        >
+          <Icons name="whatsapp" class="w-4 h-4 text-mystique-emerald group-hover:text-mystique-nuit" />
+          <span>Écrire sur WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        id="burger-btn"
+        type="button"
+        class="lg:hidden p-2 rounded-lg text-mystique-lune hover:text-mystique-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent"
+        aria-label="Ouvrir le menu de navigation"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path id="burger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden fixed inset-x-0 top-20 bg-mystique-nuit/95 backdrop-blur-xl border-b border-mystique-trait shadow-2xl px-6 py-6 transition-all duration-300"
+  >
+    <ul class="flex flex-col gap-4 text-base font-light text-mystique-brume">
+      <li>
+        <a href="/#ceremonies" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Cérémonies de Prospérité</a>
+      </li>
+      <li>
+        <a href="/#confiance" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Pourquoi Nous Faire Confiance</a>
+      </li>
+      <li>
+        <a href="/#reconnaitre" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Vous Vous Reconnaissez ?</a>
+      </li>
+      <li>
+        <a href="/#dignitaire" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Qui est le Marabout AKPLE ?</a>
+      </li>
+      <li>
+        <a href="/#distance" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Au Temple ou à Distance</a>
+      </li>
+      <li>
+        <a href="/#deroule" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Comment Ça Se Passe (4 Étapes)</a>
+      </li>
+      <li>
+        <a href="/#galerie" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Galerie du Sanctuaire</a>
+      </li>
+      <li>
+        <a href="/#avis" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Témoignages</a>
+      </li>
+      <li>
+        <a href="/#faq" class="mobile-nav-link block py-2 hover:text-mystique-lune border-b border-mystique-trait/40">Questions Fréquentes</a>
+      </li>
+      <li class="pt-2">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-mystique-accent text-mystique-nuit font-medium tracking-wide text-sm shadow-accent-glow"
+        >
+          <Icons name="whatsapp" class="w-5 h-5 text-mystique-nuit" />
+          <span>Contacter sur WhatsApp</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('site-header');
+  const burgerBtn = document.getElementById('burger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  // Scroll background blur and border
+  const onScroll = () => {
+    if (window.scrollY > 40) {
+      header?.classList.add('bg-mystique-nuit/90', 'backdrop-blur-md', 'border-b', 'border-mystique-trait');
+    } else {
+      header?.classList.remove('bg-mystique-nuit/90', 'backdrop-blur-md', 'border-b', 'border-mystique-trait');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu toggle
+  burgerBtn?.addEventListener('click', () => {
+    const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+    burgerBtn.setAttribute('aria-expanded', String(!isExpanded));
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close on nav link click
+  mobileLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      burgerBtn?.setAttribute('aria-expanded', 'false');
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>

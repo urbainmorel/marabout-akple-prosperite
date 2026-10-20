@@ -1,0 +1,44 @@
+---
+import { fallbackSettings } from '../data/fallback';
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-12 bg-mystique-nuit border-t border-mystique-trait/60 text-mystique-brume text-xs sm:text-sm font-light">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-mystique-trait/40">
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-mystique-accent to-mystique-emerald flex items-center justify-center text-mystique-nuit font-serif font-bold text-sm">
+          A
+        </span>
+        <span class="font-serif text-lg text-mystique-lune tracking-wide">
+          Marabout AKPLE • Cérémonies de Prospérité
+        </span>
+      </div>
+
+      <ul class="flex flex-wrap items-center justify-center gap-6 text-xs text-mystique-brume">
+        <li>
+          <a href="/mentions-legales" class="hover:text-mystique-lune transition-colors">Mentions Légales</a>
+        </li>
+        <li>
+          <a href="/politique-confidentialite" class="hover:text-mystique-lune transition-colors">Politique de Confidentialité</a>
+        </li>
+        <li>
+          <a href="/conditions-generales" class="hover:text-mystique-lune transition-colors">Conditions Générales d'Accompagnement</a>
+        </li>
+        <li>
+          <a href="/sitemap.xml" class="hover:text-mystique-lune transition-colors">Plan du site (XML)</a>
+        </li>
+      </ul>
+    </div>
+
+    {/* Avertissement Déontologique et Légal Obligatoire */}
+    <div class="text-center max-w-3xl mx-auto space-y-3 text-xs leading-relaxed text-mystique-brume/80">
+      <p>
+        © {currentYear} {fallbackSettings.practitionerName} — {fallbackSettings.templeAddress}. Tous droits réservés.
+      </p>
+      <p>
+        Les rituels et cérémonies proposés constituent un accompagnement spirituel, énergétique et traditionnel issu de la cosmogonie Vodun. Ils ne constituent en aucun cas une promesse infaillible et ne se substituent aucunement à un suivi médical, psychologique, financier ou juridique par des professionnels habilités.
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.env
+.env.production
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+extracted_media/
+extracted_content.txt

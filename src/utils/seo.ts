@@ -1,0 +1,110 @@
+import { fallbackSettings, fallbackFaqs } from '../data/fallback';
+
+export function generateProfessionalServiceSchema(currentUrl: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${currentUrl}#sanctuaire`,
+    'name': 'Sanctuaire Marabout AKPLE — Cérémonies de Prospérité Vodun',
+    'alternateName': [
+      'Marabout AKPLE Ouidah',
+      'Haut Dignitaire Vodun AKPLE',
+      'Cabinet Spirituel Vodun Prospérité',
+    ],
+    'url': currentUrl,
+    'logo': `${fallbackSettings.siteUrl}/images/marabout-akple-haut-dignitaire-vodun.webp`,
+    'image': [
+      `${fallbackSettings.siteUrl}/images/og-image.jpg`,
+      `${fallbackSettings.siteUrl}/images/hero-temple-vodun-akple.webp`,
+      `${fallbackSettings.siteUrl}/images/marabout-akple-haut-dignitaire-vodun.webp`,
+    ],
+    'telephone': fallbackSettings.phoneNumberBJ,
+    'description': fallbackSettings.metaDescription,
+    'address': {
+      '@type': 'PostalAddress',
+      'addressCountry': 'BJ',
+      'addressLocality': 'Ouidah',
+      'addressRegion': 'Atlantique',
+      'streetAddress': 'Cité Historique du Vodun',
+    },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': '6.3631',
+      'longitude': '2.0851',
+    },
+    'openingHours': 'Mo-Sa 08:00-18:00',
+    'priceRange': '$$',
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '4.97',
+      'reviewCount': '184',
+      'bestRating': '5',
+      'worstRating': '1',
+    },
+    'hasOfferCatalog': {
+      '@type': 'OfferCatalog',
+      'name': 'Cérémonies et Rituels de Prospérité Vodun',
+      'itemListElement': [
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Consultation du Fâ (Diagnostic Spirituel)',
+            'description': 'Lecture approfondie des blocages et détermination de la voie d’élévation.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Bain de Purification Amassi',
+            'description': 'Purification aux feuilles sacrées pour dissoudre les énergies négatives.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Cérémonie de Legba (Ouverture des Portes)',
+            'description': 'Déblocage des carrefours financiers et levée des verrous occultes.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Cérémonie de Dan (Fixation de l’Abondance)',
+            'description': 'Attirer et pérenniser la fortune et l’harmonie matérielle.',
+          },
+        },
+      ],
+    },
+  };
+}
+
+export function generateWebSiteSchema(siteUrl: string = fallbackSettings.siteUrl) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteUrl}#website`,
+    'url': siteUrl,
+    'name': 'Cérémonies de Prospérité Vodun — Marabout AKPLE',
+    'inLanguage': 'fr-FR',
+    'description': fallbackSettings.metaDescription,
+  };
+}
+
+export function generateFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': fallbackFaqs.map((faq) => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer,
+      },
+    })),
+  };
+}
