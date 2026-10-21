@@ -22,7 +22,7 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
       « La chance se provoque, la réussite se prépare. »
     </p>
 
-    <p class="text-stone-300 text-base sm:text-lg font-light leading-relaxed max-w-xl mx-auto mb-10">
+    <p class="text-stone-200 text-base sm:text-lg font-normal leading-relaxed max-w-xl mx-auto mb-10">
       Au Bénin ou à l’étranger, échangez avec le Marabout AKPLE en toute discrétion. Réponse directe et sans engagement.
     </p>
 
@@ -39,16 +39,16 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
 
       <a
         href={`tel:${fallbackSettings.phoneNumberBJ.replace(/\s+/g, '')}`}
-        class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-neutral-700 hover:border-neutral-500 bg-neutral-900/90 hover:bg-neutral-800 text-white text-base font-light transition-all duration-300 shadow-sm"
+        class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-neutral-700 hover:border-neutral-500 bg-neutral-900/90 hover:bg-neutral-800 text-white text-base font-normal transition-all duration-300 shadow-sm"
       >
         <Icons name="phone" class="w-4 h-4 text-mystique-accent" />
         <span>Appeler : {fallbackSettings.phoneNumberBJ}</span>
       </a>
     </div>
 
-    <div class="flex items-center justify-center gap-2 text-sm sm:text-sm text-neutral-300">
-      <Icons name="video" class="w-4 h-4 text-mystique-emerald flex-shrink-0" />
-      <span>Consultations par appel vidéo WhatsApp • Possibilité d'assister à vos rituels en direct</span>
+    <div class="inline-flex items-center justify-center gap-1.5 text-sm sm:text-base text-stone-200 font-medium">
+      <Icons name="video" class="w-4 h-4 text-red-500 shrink-0" />
+      <span>Appel vidéo WhatsApp</span>
     </div>
   </div>
 </section>

@@ -3,7 +3,7 @@ import { fallbackSettings } from '../data/fallback';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="py-12 bg-neutral-900 border-t border-neutral-800 text-neutral-400 text-xs sm:text-sm font-light">
+<footer class="py-12 bg-neutral-900 border-t border-neutral-800 text-neutral-300 text-sm font-normal">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-neutral-800">
       <div class="flex items-center gap-3">
@@ -21,29 +21,29 @@ const currentYear = new Date().getFullYear();
             class="h-9 w-auto object-contain"
           />
         </picture>
-        <span class="font-serif text-lg text-neutral-100 tracking-wide">
+        <span class="font-serif text-lg text-neutral-100 tracking-wide font-normal">
           Marabout AKPLE • Cérémonies de Prospérité
         </span>
       </div>
 
-      <ul class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-neutral-400">
+      <ul class="flex flex-wrap items-center justify-center gap-6 text-sm text-neutral-300 font-normal">
         <li>
-          <a href="/mentions-legales" class="hover:text-neutral-100 transition-colors">Mentions Légales</a>
+          <a href="/mentions-legales" class="hover:text-white transition-colors">Mentions Légales</a>
         </li>
         <li>
-          <a href="/politique-confidentialite" class="hover:text-neutral-100 transition-colors">Politique de Confidentialité</a>
+          <a href="/politique-confidentialite" class="hover:text-white transition-colors">Politique de Confidentialité</a>
         </li>
         <li>
-          <a href="/conditions-generales" class="hover:text-neutral-100 transition-colors">Conditions Générales d'Accompagnement</a>
+          <a href="/conditions-generales" class="hover:text-white transition-colors">Conditions Générales d'Accompagnement</a>
         </li>
         <li>
-          <a href="/sitemap.xml" class="hover:text-neutral-100 transition-colors">Plan du site (XML)</a>
+          <a href="/sitemap.xml" class="hover:text-white transition-colors">Plan du site (XML)</a>
         </li>
       </ul>
     </div>
 
     {/* Avertissement Déontologique et Légal Obligatoire */}
-    <div class="text-center max-w-3xl mx-auto space-y-3 text-xs sm:text-sm leading-relaxed text-neutral-400/90">
+    <div class="text-center max-w-3xl mx-auto space-y-3 text-xs sm:text-sm leading-relaxed text-neutral-400 font-normal">
       <p>
         © {currentYear} {fallbackSettings.practitionerName} — {fallbackSettings.templeAddress}. Tous droits réservés.
       </p>
