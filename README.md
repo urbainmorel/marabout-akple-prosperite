@@ -135,6 +135,6 @@ npx wrangler pages deploy dist --project-name=marabout-akple-prosperite
 
 ## 📱 Contacts & Canaux Officiels
 
-- **WhatsApp Direct** : `+229 01 90 87 13 12` ([Lien WhatsApp](https://wa.me/2290190871312))
-- **Téléphone Bénin** : `+229 01 90 87 13 12`
+- **WhatsApp Direct** : `+33 7 74 40 72 20` ([Lien WhatsApp](https://wa.me/33774407220))
+- **Téléphone Mobile** : `+33 7 74 40 72 20`
 - **Sanctuaire** : Bénin

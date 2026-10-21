@@ -27,13 +27,13 @@ export default defineType({
       name: 'whatsappNumber',
       title: 'Numéro WhatsApp (Format international sans espace)',
       type: 'string',
-      initialValue: '+2290190871312',
+      initialValue: '+33774407220',
     }),
     defineField({
       name: 'phoneNumberBJ',
-      title: 'Numéro Appel Bénin',
+      title: 'Numéro Appel Mobile / WhatsApp',
       type: 'string',
-      initialValue: '+229 01 90 87 13 12',
+      initialValue: '+33 7 74 40 72 20',
     }),
     defineField({
       name: 'templeAddress',
