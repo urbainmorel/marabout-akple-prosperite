@@ -1,6 +1,6 @@
 ---
 import Icons from './Icons.astro';
-import { fallbackSettings } from '../data/fallback';
+import { fallbackSettings, fallbackTrustMetrics } from '../data/fallback';
 ---
 
 <section id="dignitaire" class="py-20 sm:py-28 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
@@ -29,13 +29,8 @@ import { fallbackSettings } from '../data/fallback';
         </div>
       </div>
 
-      {/* Description & Déontologie */}
+      {/* Description & Autorité Fusionnée */}
       <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs tracking-wider uppercase font-medium shadow-sm">
-          <Icons name="badge-check" class="w-3.5 h-3.5 text-mystique-emerald" />
-          <span>Tradition et Savoir Ancestral</span>
-        </div>
-
         <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight">
           Qui est le Marabout AKPLE ?
         </h2>
@@ -48,45 +43,61 @@ import { fallbackSettings } from '../data/fallback';
           Héritier d’un savoir familial séculaire, il va droit au but : voyance claire du Fâ, vérité sans détour et rituels efficaces pour ouvrir vos portes.
         </p>
 
+        {/* 3 Chiffres Clés d'Autorité */}
+        <div class="grid grid-cols-3 gap-3 sm:gap-4 py-2">
+          <div class="p-3 sm:p-4 rounded-2xl bg-white border border-mystique-trait text-center shadow-sm">
+            <strong class="block font-serif text-xl sm:text-2xl text-mystique-accent font-semibold">+30 ans</strong>
+            <span class="text-[11px] sm:text-xs text-mystique-brume font-light">de tradition à Ouidah</span>
+          </div>
+          <div class="p-3 sm:p-4 rounded-2xl bg-white border border-mystique-trait text-center shadow-sm">
+            <strong class="block font-serif text-xl sm:text-2xl text-mystique-accent font-semibold">Des milliers</strong>
+            <span class="text-[11px] sm:text-xs text-mystique-brume font-light">de vies débloquées</span>
+          </div>
+          <div class="p-3 sm:p-4 rounded-2xl bg-white border border-mystique-trait text-center shadow-sm">
+            <strong class="block font-serif text-xl sm:text-2xl text-mystique-emerald font-semibold">100 %</strong>
+            <span class="text-[11px] sm:text-xs text-mystique-brume font-light">secret & confidentiel</span>
+          </div>
+        </div>
+
         {/* Les 4 Piliers Déontologiques */}
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-          <div class="p-4 rounded-2xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all flex items-start gap-3">
-            <span class="p-2 rounded-xl bg-red-50 text-mystique-accent mt-0.5 border border-red-100 flex-shrink-0">
-              <Icons name="check" class="w-4 h-4" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="p-3.5 rounded-2xl bg-white border border-mystique-trait shadow-sm flex items-start gap-3">
+            <span class="p-1.5 rounded-xl bg-red-50 text-mystique-accent mt-0.5 border border-red-100 flex-shrink-0">
+              <Icons name="check" class="w-3.5 h-3.5" />
             </span>
             <div>
-              <h3 class="text-sm font-medium text-mystique-lune font-serif">Accueil direct & sincère</h3>
-              <p class="text-xs text-mystique-brume mt-1">Écoute attentive et discrète de votre histoire.</p>
+              <h3 class="text-xs sm:text-sm font-medium text-mystique-lune font-serif">Accueil direct & sincère</h3>
+              <p class="text-[11px] text-mystique-brume mt-0.5">Écoute attentive sans aucun jugement.</p>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all flex items-start gap-3">
-            <span class="p-2 rounded-xl bg-red-50 text-mystique-accent mt-0.5 border border-red-100 flex-shrink-0">
-              <Icons name="shield-check" class="w-4 h-4" />
+          <div class="p-3.5 rounded-2xl bg-white border border-mystique-trait shadow-sm flex items-start gap-3">
+            <span class="p-1.5 rounded-xl bg-red-50 text-mystique-accent mt-0.5 border border-red-100 flex-shrink-0">
+              <Icons name="shield-check" class="w-3.5 h-3.5" />
             </span>
             <div>
-              <h3 class="text-sm font-medium text-mystique-lune font-serif">Tradition pure d’Ouidah</h3>
-              <p class="text-xs text-mystique-brume mt-1">Rituels authentiques et reconnus de longue date.</p>
+              <h3 class="text-xs sm:text-sm font-medium text-mystique-lune font-serif">Tradition pure d’Ouidah</h3>
+              <p class="text-[11px] text-mystique-brume mt-0.5">Rituels canoniques ancestraux.</p>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all flex items-start gap-3">
-            <span class="p-2 rounded-xl bg-red-50 text-mystique-accent mt-0.5 border border-red-100 flex-shrink-0">
-              <Icons name="arrow-right" class="w-4 h-4" />
+          <div class="p-3.5 rounded-2xl bg-white border border-mystique-trait shadow-sm flex items-start gap-3">
+            <span class="p-1.5 rounded-xl bg-red-50 text-mystique-accent mt-0.5 border border-red-100 flex-shrink-0">
+              <Icons name="arrow-right" class="w-3.5 h-3.5" />
             </span>
             <div>
-              <h3 class="text-sm font-medium text-mystique-lune font-serif">Suivi pas à pas</h3>
-              <p class="text-xs text-mystique-brume mt-1">Vous restez guidé du début jusqu'au résultat.</p>
+              <h3 class="text-xs sm:text-sm font-medium text-mystique-lune font-serif">Suivi pas à pas</h3>
+              <p class="text-[11px] text-mystique-brume mt-0.5">Accompagnement continu jusqu'au résultat.</p>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all flex items-start gap-3">
-            <span class="p-2 rounded-xl bg-red-50 text-mystique-accent mt-0.5 border border-red-100 flex-shrink-0">
-              <Icons name="lock" class="w-4 h-4" />
+          <div class="p-3.5 rounded-2xl bg-white border border-mystique-trait shadow-sm flex items-start gap-3">
+            <span class="p-1.5 rounded-xl bg-red-50 text-mystique-accent mt-0.5 border border-red-100 flex-shrink-0">
+              <Icons name="lock" class="w-3.5 h-3.5" />
             </span>
             <div>
-              <h3 class="text-sm font-medium text-mystique-lune font-serif">Éthique & Protection</h3>
-              <p class="text-xs text-mystique-brume mt-1">Travail 100 % sain. Zéro sorcellerie négative.</p>
+              <h3 class="text-xs sm:text-sm font-medium text-mystique-lune font-serif">Éthique & Protection</h3>
+              <p class="text-[11px] text-mystique-brume mt-0.5">Zéro travail pour nuire, que du positif.</p>
             </div>
           </div>
         </div>

@@ -1,14 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-import TrustSection from '../components/TrustSection.astro';
 import RecognizeSection from '../components/RecognizeSection.astro';
 import DignitarySection from '../components/DignitarySection.astro';
 import CeremoniesSection from '../components/CeremoniesSection.astro';
 import TempleOrDistanceSection from '../components/TempleOrDistanceSection.astro';
-import ProcessStepsSection from '../components/ProcessStepsSection.astro';
-import TargetAudienceSection from '../components/TargetAudienceSection.astro';
-import GallerySection from '../components/GallerySection.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import FAQSection from '../components/FAQSection.astro';
 import FinalCTASection from '../components/FinalCTASection.astro';
@@ -28,14 +24,10 @@ const faqSchema = generateFaqSchema();
   jsonLd={faqSchema}
 >
   <Hero />
-  <TrustSection />
   <RecognizeSection />
   <DignitarySection />
   <CeremoniesSection ceremonies={ceremonies} />
   <TempleOrDistanceSection />
-  <ProcessStepsSection />
-  <TargetAudienceSection />
-  <GallerySection />
   <TestimonialsSection testimonials={testimonials} />
   <FAQSection faqs={faqs} />
   <FinalCTASection />

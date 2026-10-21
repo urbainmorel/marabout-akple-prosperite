@@ -14,11 +14,6 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
   />
 
   <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-200/80 bg-emerald-50/80 text-mystique-emerald text-xs font-medium tracking-wider uppercase mb-6 shadow-sm">
-      <span class="w-2 h-2 rounded-full bg-mystique-emerald animate-pulse" />
-      <span>Consultation Ouverte</span>
-    </div>
-
     <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-mystique-lune tracking-tight max-w-3xl mx-auto mb-6 leading-tight">
       Votre chemin peut s’ouvrir dès aujourd'hui.
     </h2>
@@ -31,7 +26,7 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
       Au Bénin ou à l’étranger, échangez avec le Marabout AKPLE en toute discrétion. Réponse directe et sans engagement.
     </p>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
       <a
         href={whatsappUrl}
         target="_blank"
@@ -49,6 +44,11 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
         <Icons name="phone" class="w-4 h-4 text-mystique-accent" />
         <span>Appeler : {fallbackSettings.phoneNumberBJ}</span>
       </a>
+    </div>
+
+    <div class="flex items-center justify-center gap-2 text-xs sm:text-sm text-mystique-brume mb-14">
+      <Icons name="video" class="w-4 h-4 text-mystique-emerald flex-shrink-0" />
+      <span>Consultations par appel vidéo WhatsApp • Possibilité d'assister à vos rituels en direct</span>
     </div>
 
     {/* 4 Blocs d'Informations Pratiques */}

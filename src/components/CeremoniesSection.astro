@@ -1,19 +1,18 @@
 ---
-import type { CeremonyItem } from '../data/fallback';
+import Icons from './Icons.astro';
+import { fallbackSettings, type CeremonyItem } from '../data/fallback';
 
 interface Props {
   ceremonies: CeremonyItem[];
 }
 
 const { ceremonies } = Astro.props;
+const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite ouvrir mes chemins et solliciter une consultation de prospérité.')}`;
 ---
 
 <section id="ceremonies" class="py-20 sm:py-28 relative bg-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4 shadow-sm">
-        <span>Parcours d'Élévation Spirituelle</span>
-      </div>
       <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-mystique-lune tracking-tight mb-6">
         Nos cérémonies de prospérité
       </h2>
@@ -22,12 +21,12 @@ const { ceremonies } = Astro.props;
       </p>
     </div>
 
-    {/* Grille des Cérémonies : 2 rituels par ligne */}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* Grille des Cérémonies : 3 cérémonies par ligne, ratio 4:3 */}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {ceremonies.map((ceremony) => (
         <article class="rounded-3xl border border-mystique-trait hover:border-mystique-accent/40 bg-white shadow-sm hover:shadow-xl overflow-hidden transition-all duration-300 flex flex-col group">
-          {/* Image Cérémonie avec Ratio 16/10 et Balisage Picture */}
-          <div class="relative overflow-hidden bg-gray-50 aspect-[16/10]">
+          {/* Image Cérémonie avec Ratio 4:3 et Balisage Picture */}
+          <div class="relative overflow-hidden bg-gray-50 aspect-[4/3]">
             <picture>
               <source srcset={ceremony.imageWebp} type="image/webp" />
               <img
@@ -41,15 +40,10 @@ const { ceremonies } = Astro.props;
                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
             </picture>
-            <div class="absolute top-4 left-4">
-              <span class="px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-sm border border-mystique-trait text-mystique-accent text-xs font-serif font-medium shadow-sm">
-                Étape {ceremony.stepNumber}
-              </span>
-            </div>
           </div>
 
           {/* Contenu de la Carte */}
-          <div class="p-6 sm:p-8 flex flex-col justify-start flex-grow">
+          <div class="p-6 sm:p-7 flex flex-col justify-start flex-grow">
             <h3 class="font-serif text-xl sm:text-2xl text-mystique-lune font-normal leading-snug mb-3 group-hover:text-mystique-accent transition-colors">
               {ceremony.title}
             </h3>
@@ -61,11 +55,27 @@ const { ceremonies } = Astro.props;
       ))}
     </div>
 
-    {/* Note de Transparence */}
-    <div class="mt-12 text-center">
-      <p class="text-xs sm:text-sm text-mystique-brume italic max-w-2xl mx-auto">
-        ✦ Les offrandes rituelles (boissons, aliments, noix de cola sacrées, tissus) sont déterminées en concertation avec vous lors de la consultation. Clarté absolue avant tout engagement.
+    {/* Note de Transparence & CTA Intermédiaire de Conversion */}
+    <div class="mt-14 text-center max-w-xl mx-auto space-y-6">
+      <p class="text-xs sm:text-sm text-mystique-brume italic">
+        ✦ Les offrandes rituelles sont déterminées en toute clarté lors de la consultation. Zéro frais caché.
       </p>
+
+      <div class="pt-2 space-y-3">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-mystique-accent hover:bg-mystique-accentHover text-white font-medium tracking-wide text-base transition-all duration-300 shadow-accent-glow hover:scale-[1.02]"
+        >
+          <Icons name="whatsapp" class="w-5 h-5 text-white" />
+          <span>Demander une consultation sur WhatsApp</span>
+        </a>
+        <p class="flex items-center justify-center gap-2 text-xs text-mystique-brume font-light">
+          <Icons name="video" class="w-3.5 h-3.5 text-mystique-emerald" />
+          <span>Appels vidéo WhatsApp acceptés pour vos consultations et rituels en direct</span>
+        </p>
+      </div>
     </div>
   </div>
 </section>

@@ -1,4 +1,5 @@
 ---
+import Icons from './Icons.astro';
 import type { TestimonialItem } from '../data/fallback';
 
 interface Props {
@@ -10,16 +11,47 @@ const { testimonials } = Astro.props;
 
 <section id="avis" class="py-20 sm:py-28 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs font-medium tracking-wider uppercase mb-4 shadow-sm">
-        <span>Retours d'Expérience Authentiques</span>
-      </div>
+    <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
       <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight mb-4">
         Ils témoignent de leur réussite
       </h2>
       <p class="text-mystique-brume text-base sm:text-lg font-light leading-relaxed">
         Commerçants, entrepreneurs ou membres de la diaspora : découvrez comment leur situation s’est débloquée.
       </p>
+    </div>
+
+    {/* Bannière Visuelle Triptyque Réussite (Ratio 4:3) */}
+    <div class="mb-12 rounded-3xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center">
+      <div class="lg:col-span-5 p-6 sm:p-10 space-y-4">
+        <h3 class="font-serif text-2xl sm:text-3xl text-mystique-lune font-light leading-snug">
+          Du déblocage à l’abondance concrète
+        </h3>
+        <p class="text-mystique-brume text-sm sm:text-base font-light leading-relaxed">
+          Commerçants, cadres d'entreprise et membres de la diaspora : les cérémonies traditionnelles d'Akple ouvrent la voie à des résultats matériels durables.
+        </p>
+        <div class="pt-2 border-t border-mystique-trait/60 flex items-center gap-3">
+          <div class="flex text-amber-500 text-sm tracking-widest" aria-label="Note de 5 sur 5">
+            ★★★★★
+          </div>
+          <span class="text-xs text-mystique-brume font-medium">Plus de 180 retours positifs enregistrés</span>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 h-full">
+        <picture>
+          <source srcset="/images/temoignages-reussite-commerce-affaires.webp" type="image/webp" />
+          <img
+            src="/images/temoignages-reussite-commerce-affaires.jpg"
+            alt="Consultants épanouis dans leur commerce, bureau et réussite financière après les cérémonies du Marabout Akple"
+            title="Témoignages de réussite et d'abondance — Marabout Akple à Ouidah"
+            width="800"
+            height="600"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full aspect-[4/3] object-cover object-center"
+          />
+        </picture>
+      </div>
     </div>
 
     {/* Grille des Témoignages */}

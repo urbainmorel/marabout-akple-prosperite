@@ -2,94 +2,37 @@
 import Icons from './Icons.astro';
 ---
 
-<section id="distance" class="py-20 sm:py-28 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
+<section id="distance" class="py-20 sm:py-24 bg-mystique-encre/70 border-y border-mystique-trait/50 relative">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mb-16">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-200/80 bg-red-50/80 text-mystique-accent text-xs tracking-wider uppercase font-medium mb-4 shadow-sm">
-        <Icons name="map-pin" class="w-3.5 h-3.5 text-mystique-emerald" />
-        <span>Deux Modalités d’Accompagnement</span>
-      </div>
+    <div class="max-w-3xl mb-12 sm:mb-14">
       <h2 class="font-serif text-3xl sm:text-5xl font-light text-mystique-lune tracking-tight mb-4">
         Au temple ou à distance : la même efficacité
       </h2>
       <p class="text-mystique-brume text-base sm:text-lg font-light leading-relaxed">
-        Que vous soyez au Bénin ou installé à l’étranger dans la diaspora, vos rituels sont accomplis avec la même puissance et la même rigueur.
+        Que vous soyez au Bénin ou installé à l’étranger, les rituels agissent avec la même force spirituelle.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-      {/* Option 1: Au Temple à Ouidah */}
-      <div class="p-8 sm:p-10 rounded-3xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-xs uppercase tracking-widest text-mystique-accent font-serif font-medium">Option 1</span>
-            <span class="px-3 py-1 rounded-full bg-red-50 text-mystique-accent text-xs font-medium border border-red-100">Présentiel</span>
-          </div>
-          <h3 class="font-serif text-2xl sm:text-3xl text-mystique-lune font-light">
-            Au temple sacré à Ouidah
-          </h3>
-          <p class="text-mystique-brume text-sm sm:text-base font-light leading-relaxed">
-            Venez directement au sanctuaire d'Akple à Ouidah. Vous échangez en tête-à-tête et vivez le rituel sur place au cœur de la tradition.
-          </p>
-          <ul class="space-y-3 pt-4 border-t border-mystique-trait/60 text-sm text-mystique-lune font-light">
-            <li class="flex items-start gap-2.5">
-              <span class="text-mystique-emerald mt-0.5"><Icons name="check" class="w-4 h-4" /></span>
-              <span>Entretien privé en tête-à-tête avec Akple</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-mystique-emerald mt-0.5"><Icons name="check" class="w-4 h-4" /></span>
-              <span>Participation directe aux rituels au sanctuaire</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-mystique-emerald mt-0.5"><Icons name="check" class="w-4 h-4" /></span>
-              <span>Accueil sur rendez-vous du lundi au samedi</span>
-            </li>
-          </ul>
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Option 1: Présentiel */}
+      <div class="p-8 sm:p-10 rounded-3xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all space-y-4">
+        <span class="text-xs uppercase tracking-widest text-mystique-accent font-serif font-medium">Présentiel • Ouidah</span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-mystique-lune font-light">
+          Au temple sacré à Ouidah
+        </h3>
+        <p class="text-mystique-brume text-sm sm:text-base font-light leading-relaxed">
+          Venez échanger en tête-à-tête avec le Marabout AKPLE et participer directement à vos cérémonies sur place. Accueil confidentiel sur rendez-vous du lundi au samedi.
+        </p>
       </div>
 
-      {/* Option 2: À Distance pour la Diaspora */}
-      <div class="p-8 sm:p-10 rounded-3xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-xs uppercase tracking-widest text-mystique-emerald font-serif font-medium">Option 2</span>
-            <span class="px-3 py-1 rounded-full bg-emerald-50 text-mystique-emerald text-xs font-medium border border-emerald-100">Diaspora & Étranger</span>
-          </div>
-          <h3 class="font-serif text-2xl sm:text-3xl text-mystique-lune font-light">
-            Cérémonies à distance (Diaspora)
-          </h3>
-          <p class="text-mystique-brume text-sm sm:text-base font-light leading-relaxed">
-            Vous vivez en France, Belgique, Canada, USA ou ailleurs ? Akple réalise les cérémonies au temple pour vous et vous transmet les preuves.
-          </p>
-          <ul class="space-y-3 pt-4 border-t border-mystique-trait/60 text-sm text-mystique-lune font-light">
-            <li class="flex items-start gap-2.5">
-              <span class="text-mystique-emerald mt-0.5"><Icons name="check" class="w-4 h-4" /></span>
-              <span>Consultation du Fâ à distance (nom, date de naissance, photo)</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-mystique-emerald mt-0.5"><Icons name="check" class="w-4 h-4" /></span>
-              <span>Preuves photos et vidéos des rituels accomplis en votre nom</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-mystique-emerald mt-0.5"><Icons name="check" class="w-4 h-4" /></span>
-              <span>Envoi express par DHL ou FedEx des produits consacrés chez vous</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    {/* Encart Puissance Métaphysique */}
-    <div class="p-6 sm:p-8 rounded-3xl bg-white border border-red-200/80 shadow-sm flex flex-col sm:flex-row items-center gap-6">
-      <div class="w-12 h-12 rounded-full bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0 text-mystique-accent">
-        <Icons name="badge-check" class="w-6 h-6" />
-      </div>
-      <div>
-        <h4 class="font-serif text-lg sm:text-xl text-mystique-lune font-medium mb-1">
-          La distance ne bloque pas le résultat
-        </h4>
-        <p class="text-xs sm:text-sm text-mystique-brume leading-relaxed font-light">
-          Les forces spirituelles n'ont pas de frontière. Des centaines de consultants en Europe et en Amérique ont relancé leurs finances sans jamais avoir pris l'avion pour le Bénin.
+      {/* Option 2: Diaspora */}
+      <div class="p-8 sm:p-10 rounded-3xl bg-white border border-mystique-trait shadow-sm hover:shadow-md transition-all space-y-4">
+        <span class="text-xs uppercase tracking-widest text-mystique-emerald font-serif font-medium">Diaspora & Étranger</span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-mystique-lune font-light">
+          Cérémonies à distance
+        </h3>
+        <p class="text-mystique-brume text-sm sm:text-base font-light leading-relaxed">
+          Vous vivez en Europe, en Amérique ou en Afrique ? Akple organise votre consultation par appel vidéo WhatsApp et vous permet d’assister à vos rituels en direct. Expédition express DHL ou FedEx.
         </p>
       </div>
     </div>

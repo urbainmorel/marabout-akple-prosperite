@@ -85,6 +85,14 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
             'description': 'Bénédiction de votre lignée pour sécuriser vos réussites.',
           },
         },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Action de Grâces (Dons aux Enfants Démunis)',
+            'description': 'Dons et gratitude pour pérenniser l’abondance et la prospérité.',
+          },
+        },
       ],
     },
   };

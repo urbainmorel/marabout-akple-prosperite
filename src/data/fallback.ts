@@ -104,7 +104,7 @@ export const fallbackCeremonies: CeremonyItem[] = [
       'Le Fâ identifie l’origine exacte de vos blocages financiers. Le dignitaire Akple lit votre destinée et vous indique le rituel précis pour ouvrir votre chance.',
     imageWebp: '/images/consultation-fa-plateau-divination.webp',
     imageJpg: '/images/consultation-fa-plateau-divination.jpg',
-    altText: 'Plateau sacré de divination du Fâ avec noix de palme et chapelet traditionnel',
+    altText: 'Chapelet divinatoire traditionnel du Fâ, cauris et noix sacrées pour la voyance',
     width: 800,
     height: 600,
   },
@@ -116,7 +116,7 @@ export const fallbackCeremonies: CeremonyItem[] = [
       'Préparé avec des feuilles sacrées, ce bain dissout la poisse, la jalousie et les énergies négatives. Il libère votre esprit pour attirer le succès.',
     imageWebp: '/images/bain-purification-amassi-feuilles-sacrees.webp',
     imageJpg: '/images/bain-purification-amassi-feuilles-sacrees.jpg',
-    altText: 'Calebasse traditionnelle d’eau bénite et de feuilles sacrées d’amassi purificateur',
+    altText: 'Récipient traditionnel avec eau bénite et feuilles sacrées d’amassi purificateur',
     width: 800,
     height: 600,
   },
@@ -128,7 +128,7 @@ export const fallbackCeremonies: CeremonyItem[] = [
       'Gardien des carrefours, Legba lève les obstacles invisibles sur votre route. Il ouvre grand les portes du travail, du commerce et des rentrées d’argent.',
     imageWebp: '/images/ceremonie-legba-gardien-chemins-portes.webp',
     imageJpg: '/images/ceremonie-legba-gardien-chemins-portes.jpg',
-    altText: 'Autel consacré de la divinité Legba, gardien des carrefours et des voies de prospérité',
+    altText: 'Autel sacré traditionnel de Legba orné de cauris pour l’ouverture des opportunités',
     width: 800,
     height: 600,
   },
@@ -150,9 +150,21 @@ export const fallbackCeremonies: CeremonyItem[] = [
     title: 'L’Hommage aux Ancêtres : Protéger vos acquis',
     shortDescription:
       'Ce rituel traditionnel honore vos racines pour attirer la bénédiction de votre lignée. Il protège votre foyer et sécurise vos réussites dans la durée.',
-    imageWebp: '/images/entree-temple-akple-ouidah-distance.webp',
-    imageJpg: '/images/entree-temple-akple-ouidah-distance.jpg',
-    altText: 'Portail sacré du sanctuaire familial à Ouidah pour l’hommage aux ancêtres',
+    imageWebp: '/images/hommage-ancetres-libations-offrandes.webp',
+    imageJpg: '/images/hommage-ancetres-libations-offrandes.jpg',
+    altText: 'Offrandes de libations, noix de cola sacrées et bougie pour l’hommage aux ancêtres',
+    width: 800,
+    height: 600,
+  },
+  {
+    id: 'action-de-graces',
+    stepNumber: 6,
+    title: 'L’Action de Grâces : Dons aux enfants démunis',
+    shortDescription:
+      'Ce rituel de gratitude consiste à faire des dons aux enfants démunis. Il attire les bénédictions du ciel et pérennise votre fortune dans l’abondance.',
+    imageWebp: '/images/action-de-graces-dons-enfants-demunis.webp',
+    imageJpg: '/images/action-de-graces-dons-enfants-demunis.jpg',
+    altText: 'Carton de denrées alimentaires et provisions pour les dons aux enfants démunis en action de grâces',
     width: 800,
     height: 600,
   },
@@ -294,24 +306,14 @@ export const fallbackTestimonials: TestimonialItem[] = [
 
 export const fallbackFaqs: FaqItem[] = [
   {
-    question: 'Le résultat est-il garanti à 100 % ?',
-    answer:
-      'Non, car promettre 100 % sans effort serait un mensonge. Le rituel lève les blocages et attire la chance, mais vous devez agir sur le terrain. Les esprits multiplient vos efforts, ils ne travaillent pas à votre place.',
-  },
-  {
-    question: 'Faut-il être initié(e) ou de confession Vodun ?',
-    answer:
-      'Non, pas du tout. Le sanctuaire accueille tout le monde, quelle que soit votre origine. Il suffit de venir avec respect et sincérité.',
-  },
-  {
-    question: 'Je suis chrétien(ne) ou musulman(e). Puis-je consulter ?',
-    answer:
-      'Oui, parfaitement. Les bénédictions ancestrales ne s’opposent à aucune religion. Vous êtes reçu avec respect, bienveillance et sans aucun jugement.',
-  },
-  {
     question: 'Combien coûte une cérémonie de prospérité ?',
     answer:
-      'Le tarif dépend de votre problème et des offrandes nécessaires. Tout est fixé clairement lors de la consultation du Fâ : aucun frais caché ni mauvaise surprise.',
+      'Le tarif dépend de votre problème et des offrandes nécessaires. Tout est fixé clairement dès la première consultation du Fâ : aucun frais caché ni mauvaise surprise.',
+  },
+  {
+    question: 'Comment se passe le rituel à distance si je vis à l’étranger ?',
+    answer:
+      'Vous échangez avec Akple par message ou appel vidéo WhatsApp. Vous pouvez assister à vos cérémonies en direct par vidéo ou recevoir les preuves filmées, puis vos produits consacrés par DHL avec suivi direct.',
   },
   {
     question: 'Mes échanges et mes informations restent-ils confidentiels ?',
@@ -319,18 +321,8 @@ export const fallbackFaqs: FaqItem[] = [
       'Oui, à 100 %. Vos coordonnées, messages, photos et confidences restent strictement privés. Rien ne sort jamais du sanctuaire.',
   },
   {
-    question: 'Acceptez-vous des rituels pour nuire ou détruire un rival ?',
+    question: 'Je suis chrétien(ne) ou musulman(e). Puis-je consulter ?',
     answer:
-      'Non, jamais. Akple travaille uniquement pour votre protection, votre paix et votre réussite financière. Aucun travail malveillant n’est accepté.',
-  },
-  {
-    question: 'Comment se passe le rituel à distance si je vis à l’étranger ?',
-    answer:
-      'Vous envoyez votre nom, date de naissance et photo. Akple fait les cérémonies au temple et vous envoie photos et vidéos. Les produits consacrés arrivent par DHL avec suivi direct.',
-  },
-  {
-    question: 'Les rituels à distance ont-ils la même efficacité ?',
-    answer:
-      'Oui, les forces spirituelles n’ont pas de frontière. À Paris, Montréal ou Abidjan, le travail agit avec la même puissance qu’au sanctuaire.',
+      'Oui, parfaitement. Les bénédictions ancestrales ne s’opposent à aucune religion. Vous êtes reçu avec respect, bienveillance et sans aucun jugement.',
   },
 ];
