@@ -12,7 +12,7 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
       'Cabinet Spirituel Vodun Prospérité',
     ],
     'url': currentUrl,
-    'logo': `${fallbackSettings.siteUrl}/images/marabout-akple-haut-dignitaire-vodun.webp`,
+    'logo': `${fallbackSettings.siteUrl}/images/logo-marabout-akple.webp`,
     'image': [
       `${fallbackSettings.siteUrl}/images/og-image.jpg`,
       `${fallbackSettings.siteUrl}/images/hero-temple-vodun-akple.webp`,

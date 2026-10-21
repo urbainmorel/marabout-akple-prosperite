@@ -7,9 +7,20 @@ const currentYear = new Date().getFullYear();
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-neutral-800">
       <div class="flex items-center gap-3">
-        <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-mystique-accent to-red-600 flex items-center justify-center text-white font-serif font-bold text-sm shadow-sm">
-          A
-        </span>
+        <picture class="flex-shrink-0">
+          <source srcset="/images/logo-marabout-akple.avif" type="image/avif" />
+          <source srcset="/images/logo-marabout-akple.webp" type="image/webp" />
+          <img
+            src="/images/logo-marabout-akple.webp"
+            alt="Logo officiel Marabout AKPLE - Dan serpent Vodun de prospérité"
+            title="Marabout AKPLE • Cérémonies de Prospérité"
+            width="413"
+            height="512"
+            loading="lazy"
+            decoding="async"
+            class="h-9 w-auto object-contain"
+          />
+        </picture>
         <span class="font-serif text-lg text-neutral-100 tracking-wide">
           Marabout AKPLE • Cérémonies de Prospérité
         </span>
