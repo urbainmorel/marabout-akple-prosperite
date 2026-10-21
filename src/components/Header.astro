@@ -5,61 +5,48 @@ import { fallbackSettings } from '../data/fallback';
 const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite obtenir une consultation pour une cérémonie de prospérité.')}`;
 ---
 
-<header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 text-[#FAF6F0]">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav class="flex items-center justify-between h-20" aria-label="Navigation principale">
       <!-- Logo -->
-      <a href="/#accueil" class="group flex items-center gap-3 text-mystique-lune focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent rounded-lg">
+      <a href="/#accueil" class="group flex items-center gap-3 text-current focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent rounded-lg">
         <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-mystique-accent to-red-600 flex items-center justify-center text-white font-serif font-bold text-lg shadow-sm">
           A
         </span>
         <div class="flex flex-col">
-          <span class="font-serif text-xl sm:text-2xl tracking-wide font-normal group-hover:text-mystique-accent transition-colors">
+          <span class="font-serif text-xl sm:text-2xl tracking-wide font-normal group-hover:text-amber-300 transition-colors">
             Marabout AKPLE
           </span>
-          <span class="text-[10px] uppercase tracking-widest text-mystique-brume/75 font-sans">
-            Sanctuaire Vodun d’Ouidah
+          <span id="header-subtitle" class="text-[10px] uppercase tracking-widest text-amber-200/75 font-sans transition-colors">
+            Sanctuaire Vodun au Bénin
           </span>
         </div>
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <ul class="hidden lg:flex items-center gap-8 text-sm font-light text-mystique-brume tracking-wide">
+      <ul id="desktop-nav" class="hidden lg:flex items-center gap-8 text-sm font-light text-stone-300 tracking-wide transition-colors">
         <li>
-          <a href="/#ceremonies" class="hover:text-mystique-lune transition-colors py-1">Cérémonies</a>
+          <a href="/#ceremonies" class="hover:text-amber-300 transition-colors py-1">Cérémonies</a>
         </li>
         <li>
-          <a href="/#dignitaire" class="hover:text-mystique-lune transition-colors py-1">Qui est Akple</a>
+          <a href="/#dignitaire" class="hover:text-amber-300 transition-colors py-1">Qui est Akple</a>
         </li>
         <li>
-          <a href="/#distance" class="hover:text-mystique-lune transition-colors py-1">Présentiel ou Distance</a>
+          <a href="/#distance" class="hover:text-amber-300 transition-colors py-1">Présentiel ou Distance</a>
         </li>
         <li>
-          <a href="/#avis" class="hover:text-mystique-lune transition-colors py-1">Témoignages</a>
+          <a href="/#avis" class="hover:text-amber-300 transition-colors py-1">Témoignages</a>
         </li>
         <li>
-          <a href="/#faq" class="hover:text-mystique-lune transition-colors py-1">FAQ</a>
+          <a href="/#faq" class="hover:text-amber-300 transition-colors py-1">FAQ</a>
         </li>
       </ul>
-
-      <!-- CTA Desktop -->
-      <div class="hidden sm:flex items-center gap-3">
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-mystique-accent/30 bg-red-50 hover:bg-mystique-accent text-mystique-accent hover:text-white text-sm tracking-wide font-medium transition-all duration-300 shadow-sm hover:shadow-accent-glow group"
-        >
-          <Icons name="whatsapp" class="w-4 h-4 text-mystique-emerald group-hover:text-white transition-colors" />
-          <span>Écrire sur WhatsApp</span>
-        </a>
-      </div>
 
       <!-- Mobile Hamburger Button -->
       <button
         id="burger-btn"
         type="button"
-        class="lg:hidden p-2 rounded-lg text-mystique-lune hover:text-mystique-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent"
+        class="lg:hidden p-2 rounded-lg text-current hover:text-amber-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-mystique-accent"
         aria-label="Ouvrir le menu de navigation"
         aria-expanded="false"
         aria-controls="mobile-menu"
@@ -112,16 +99,26 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
 
 <script>
   const header = document.getElementById('site-header');
+  const subtitle = document.getElementById('header-subtitle');
+  const desktopNav = document.getElementById('desktop-nav');
   const burgerBtn = document.getElementById('burger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  const heroSection = document.getElementById('accueil');
 
-  // Scroll background blur and border
+  // Scroll background blur and adaptive colors over dark Hero vs light sections
   const onScroll = () => {
-    if (window.scrollY > 40) {
-      header?.classList.add('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-mystique-trait', 'shadow-sm');
+    const isLightHeader = !heroSection || window.scrollY > 40;
+    if (isLightHeader) {
+      header?.classList.add('bg-white/95', 'backdrop-blur-md', 'border-b', 'border-mystique-trait', 'shadow-sm', 'text-mystique-lune');
+      header?.classList.remove('text-[#FAF6F0]');
+      subtitle?.classList.replace('text-amber-200/75', 'text-mystique-brume/75');
+      desktopNav?.classList.replace('text-stone-300', 'text-mystique-brume');
     } else {
-      header?.classList.remove('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-mystique-trait', 'shadow-sm');
+      header?.classList.remove('bg-white/95', 'backdrop-blur-md', 'border-b', 'border-mystique-trait', 'shadow-sm', 'text-mystique-lune');
+      header?.classList.add('text-[#FAF6F0]');
+      subtitle?.classList.replace('text-mystique-brume/75', 'text-amber-200/75');
+      desktopNav?.classList.replace('text-mystique-brume', 'text-stone-300');
     }
   };
   window.addEventListener('scroll', onScroll, { passive: true });

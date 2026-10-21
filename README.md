@@ -1,6 +1,6 @@
 # Sanctuaire Vodun Marabout AKPLE — Cérémonies de Prospérité
 
-Site web officiel dédié aux **Cérémonies et Rituels de Prospérité, de Chance et de Richesse** du **Marabout AKPLE**, Haut Dignitaire du Culte Vodun à Ouidah (Bénin).
+Site web officiel dédié aux **Cérémonies et Rituels de Prospérité, de Chance et de Richesse** du **Marabout AKPLE**, Haut Dignitaire du Culte Vodun au Bénin.
 
 - 🌐 **Domaine Officiel** : [https://www.grand-marabout-akple.com](https://www.grand-marabout-akple.com)
 - ⚡ **URL Cloudflare Pages** : [https://marabout-akple-prosperite.pages.dev](https://marabout-akple-prosperite.pages.dev)
@@ -11,7 +11,7 @@ Site web officiel dédié aux **Cérémonies et Rituels de Prospérité, de Chan
 ## 🌟 Identité & Concept du Projet
 
 - **Thématique exclusive** : Prospérité financière, abondance matérielle, déblocage de commerce et réussite professionnelle.
-- **Approche** : Rituels au temple d'Ouidah ou à distance pour la diaspora mondiale (Europe, Amérique, Afrique).
+- **Approche** : Rituels au temple au Bénin ou à distance pour la diaspora mondiale (Europe, Amérique, Afrique).
 - **Template & Design** : *Landing Mystique Nocturne* — Nuances profondes nuit violette (`#0a0912`, `#120f1d`), halo lunaire (`#efeaf7`), accents améthyste céleste (`#a99bff`) et émeraude sacrée (`#74d3c4`), astre mystique animé en respiration cosmique.
 - **Typographie** : *Cormorant Garamond* (titres nobles & ésotériques) et *Manrope* (corps de texte moderne et lisible).
 - **Conformité stricte** :
@@ -137,4 +137,4 @@ npx wrangler pages deploy dist --project-name=marabout-akple-prosperite
 
 - **WhatsApp Direct** : `+229 01 90 87 13 12` ([Lien WhatsApp](https://wa.me/2290190871312))
 - **Téléphone Bénin** : `+229 01 90 87 13 12`
-- **Sanctuaire** : Ouidah, Bénin
+- **Sanctuaire** : Bénin

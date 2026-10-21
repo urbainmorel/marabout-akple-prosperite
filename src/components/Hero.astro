@@ -5,31 +5,45 @@ import { fallbackSettings } from '../data/fallback';
 const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite ouvrir les chemins de ma réussite et solliciter une première consultation de prospérité.')}`;
 ---
 
-<section id="accueil" class="relative min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden bg-gradient-to-b from-white via-mystique-encre to-white">
-  {/* Lueur d'ambiance douce en arrière-plan */}
-  <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none" />
+<section
+  id="accueil"
+  class="relative min-h-[92vh] flex items-center pt-36 sm:pt-40 lg:pt-44 pb-24 sm:pb-28 lg:pb-32 overflow-hidden bg-gradient-to-br from-[#0B0F17] via-[#131012] to-[#1A1310] border-b border-amber-500/15"
+>
+  {/* Lueur d'ambiance dorée et rouge sacrée en arrière-plan */}
+  <div
+    class="absolute inset-0 bg-[radial-gradient(rgba(217,119,6,0.14)_1px,transparent_1px)] [background-size:28px_28px] opacity-60 pointer-events-none"
+    aria-hidden="true"
+  />
+  <div
+    class="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-amber-600/10 blur-[130px] pointer-events-none"
+    aria-hidden="true"
+  />
+  <div
+    class="absolute -bottom-32 right-0 w-[550px] h-[550px] rounded-full bg-red-600/15 blur-[140px] pointer-events-none"
+    aria-hidden="true"
+  />
 
-  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+  <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 sm:gap-16 lg:gap-12 items-center">
       {/* Colonne Gauche : Titre, Promesse & Appel à l'action */}
-      <div class="lg:col-span-7 max-w-2xl">
+      <div class="lg:col-span-7 max-w-2xl mx-auto lg:mx-0 flex flex-col items-center lg:items-start text-center lg:text-left">
         {/* Titre Principal */}
-        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-mystique-lune leading-[1.08] tracking-tight mb-6">
-          Ouvrez les chemins de votre réussite.
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-[#FAF6F0] leading-[1.12] tracking-tight mb-7 sm:mb-8">
+          Ouvrez les chemins de votre <span class="text-amber-300/95 italic font-normal">réussite</span>.
         </h1>
 
         {/* Description / Accroche */}
-        <p class="text-base sm:text-xl text-mystique-brume font-light leading-relaxed mb-8 max-w-xl">
-          Rituels traditionnels pour débloquer vos finances, attirer les opportunités et faire prospérer votre activité avec le Marabout AKPLE à Ouidah.
+        <p class="text-base sm:text-xl text-stone-300/90 font-light leading-relaxed mb-9 sm:mb-11 max-w-xl mx-auto lg:mx-0">
+          Rituels traditionnels pour débloquer vos finances, attirer les opportunités et faire prospérer votre activité avec le Marabout AKPLE au Bénin.
         </p>
 
         {/* Actions */}
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-5 w-full sm:w-auto mb-9 sm:mb-10">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-mystique-accent hover:bg-mystique-accentHover text-white font-medium tracking-wide text-base transition-all duration-300 shadow-accent-glow hover:scale-[1.02]"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-mystique-accent hover:bg-mystique-accentHover text-white font-medium tracking-wide text-base transition-all duration-300 shadow-[0_10px_30px_-5px_rgba(220,38,38,0.5)] hover:scale-[1.02]"
           >
             <Icons name="whatsapp" class="w-5 h-5 text-white" />
             <span>Écrire sur WhatsApp</span>
@@ -37,16 +51,16 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
 
           <a
             href="#ceremonies"
-            class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-mystique-trait hover:border-mystique-accent/50 bg-white hover:bg-mystique-encre text-mystique-lune text-base font-light transition-all duration-300 shadow-sm"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-amber-200/20 hover:border-amber-300/50 bg-white/5 hover:bg-white/10 text-[#FAF6F0] text-base font-light backdrop-blur-sm transition-all duration-300"
           >
             <span>Découvrir les rituels</span>
-            <Icons name="arrow-right" class="w-4 h-4 text-mystique-accent" />
+            <Icons name="arrow-right" class="w-4 h-4 text-amber-400" />
           </a>
         </div>
 
         {/* Micro-réassurance */}
-        <div class="flex items-center gap-3 text-xs sm:text-sm text-mystique-brume">
-          <span class="inline-block w-2.5 h-2.5 rounded-full bg-mystique-emerald animate-pulse" />
+        <div class="flex items-center justify-center lg:justify-start gap-3 text-xs sm:text-sm text-stone-400 leading-relaxed max-w-md sm:max-w-none">
+          <span class="inline-block w-2.5 h-2.5 shrink-0 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
           <span>Appel vidéo WhatsApp possible • Suivez vos rituels en direct • 100 % confidentiel</span>
         </div>
       </div>
@@ -54,26 +68,26 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
       {/* Colonne Droite : L'Astre Solaire Rouge et l'Image du Sanctuaire au-dessus */}
       <div class="lg:col-span-5 flex items-center justify-center relative">
         {/* Conteneur relatif centré de la sphère et de la photo */}
-        <div class="relative w-full max-w-[460px] flex items-center justify-center py-6 sm:py-10">
-          {/* Disque ou Sphère Dégradé Rouge (Astre respirant avec halos concentriques) */}
+        <div class="relative w-full max-w-[460px] flex items-center justify-center py-8 sm:py-12">
+          {/* Disque ou Sphère Dégradé Rouge & Or (Astre respirant avec halos concentriques sur fond nuit) */}
           <div
-            class="absolute inset-0 m-auto w-[min(85vw,420px)] aspect-square rounded-full pointer-events-none select-none z-0 animate-respire opacity-90"
-            style="background: radial-gradient(circle at 35% 32%, #fee2e2 0%, #fca5a5 24%, #ef4444 54%, rgba(220, 38, 38, 0.35) 76%, transparent 82%);"
+            class="absolute inset-0 m-auto w-[min(85vw,420px)] aspect-square rounded-full pointer-events-none select-none z-0 animate-respire opacity-95"
+            style="background: radial-gradient(circle at 35% 32%, #fef3c7 0%, #f87171 28%, #dc2626 55%, rgba(220, 38, 38, 0.38) 74%, transparent 84%);"
             aria-hidden="true"
           >
-            {/* Anneaux d'orbite sacrés */}
-            <div class="absolute -inset-[7%] rounded-full border border-red-200/60" />
-            <div class="absolute -inset-[15%] rounded-full border border-red-100/50" />
+            {/* Anneaux d'orbite sacrés dorés/rouges */}
+            <div class="absolute -inset-[7%] rounded-full border border-amber-400/30" />
+            <div class="absolute -inset-[15%] rounded-full border border-red-500/20" />
           </div>
 
           {/* Image du Sanctuaire placée au-dessus du disque / sphère dégradé */}
-          <div class="relative z-10 w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group">
+          <div class="relative z-10 w-full rounded-3xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] border-2 border-amber-500/30 bg-[#14110F] group">
             <picture>
               <source srcset="/images/hero-temple-vodun-akple.webp" type="image/webp" />
               <img
                 src="/images/hero-temple-vodun-akple.jpg"
-                alt="Sanctuaire ancestral du Marabout AKPLE à Ouidah — Cérémonies Vodun de prospérité"
-                title="Sanctuaire du Marabout AKPLE à Ouidah au Bénin"
+                alt="Sanctuaire ancestral du Marabout AKPLE au Bénin — Cérémonies Vodun de prospérité"
+                title="Sanctuaire du Marabout AKPLE au Bénin"
                 width="1000"
                 height="558"
                 loading="eager"
@@ -82,12 +96,12 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
                 class="w-full h-auto aspect-[16/10] object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
             </picture>
-            <div class="p-3.5 sm:p-4 bg-white/95 backdrop-blur-sm border-t border-gray-100 flex items-center justify-between">
+            <div class="p-4 sm:p-5 bg-[#14110F]/95 backdrop-blur-md border-t border-amber-500/20 flex items-center justify-center lg:justify-between text-center lg:text-left">
               <div>
-                <span class="block font-serif text-sm sm:text-base text-mystique-lune font-medium leading-snug">
-                  Sanctuaire Vodun d’Ouidah
+                <span class="block font-serif text-sm sm:text-base text-[#FAF6F0] font-medium leading-snug">
+                  Sanctuaire Vodun au Bénin
                 </span>
-                <span class="block text-[11px] text-mystique-brume font-light">
+                <span class="block text-[11px] text-amber-200/70 font-light mt-0.5">
                   Berceau historique des rituels de prospérité
                 </span>
               </div>

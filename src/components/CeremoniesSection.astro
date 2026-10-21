@@ -24,9 +24,9 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
     {/* Grille des Cérémonies : 3 cérémonies par ligne, ratio 4:3 */}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {ceremonies.map((ceremony) => (
-        <article class="rounded-3xl border border-mystique-trait hover:border-mystique-accent/40 bg-white shadow-sm hover:shadow-xl overflow-hidden transition-all duration-300 flex flex-col group">
+        <article class="rounded-3xl border border-neutral-800 hover:border-mystique-accent/50 bg-black shadow-md hover:shadow-2xl hover:shadow-black/30 overflow-hidden transition-all duration-300 flex flex-col group">
           {/* Image Cérémonie avec Ratio 4:3 et Balisage Picture */}
-          <div class="relative overflow-hidden bg-gray-50 aspect-[4/3]">
+          <div class="relative overflow-hidden bg-neutral-900 aspect-[4/3]">
             <picture>
               <source srcset={ceremony.imageWebp} type="image/webp" />
               <img
@@ -44,10 +44,10 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
 
           {/* Contenu de la Carte */}
           <div class="p-6 sm:p-7 flex flex-col justify-start flex-grow">
-            <h3 class="font-serif text-xl sm:text-2xl text-mystique-lune font-normal leading-snug mb-3 group-hover:text-mystique-accent transition-colors">
+            <h3 class="font-serif text-xl sm:text-2xl text-white font-normal leading-snug mb-3 group-hover:text-mystique-accent transition-colors">
               {ceremony.title}
             </h3>
-            <p class="text-sm sm:text-base text-mystique-brume font-light leading-relaxed">
+            <p class="text-sm sm:text-base text-stone-300 font-light leading-relaxed">
               {ceremony.shortDescription}
             </p>
           </div>

@@ -7,7 +7,7 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
     '@id': `${currentUrl}#sanctuaire`,
     'name': 'Sanctuaire Marabout AKPLE — Cérémonies de Prospérité Vodun',
     'alternateName': [
-      'Marabout AKPLE Ouidah',
+      'Marabout AKPLE Bénin',
       'Haut Dignitaire Vodun AKPLE',
       'Cabinet Spirituel Vodun Prospérité',
     ],
@@ -23,9 +23,9 @@ export function generateProfessionalServiceSchema(currentUrl: string) {
     'address': {
       '@type': 'PostalAddress',
       'addressCountry': 'BJ',
-      'addressLocality': 'Ouidah',
-      'addressRegion': 'Atlantique',
-      'streetAddress': 'Cité Historique du Vodun',
+      'addressLocality': 'Bénin',
+      'addressRegion': 'Bénin',
+      'streetAddress': 'Sanctuaire Ancestral Vodun',
     },
     'geo': {
       '@type': 'GeoCoordinates',

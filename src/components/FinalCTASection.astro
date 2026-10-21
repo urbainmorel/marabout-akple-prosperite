@@ -5,16 +5,16 @@ import { fallbackSettings } from '../data/fallback';
 const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite faire le premier pas et entamer mon accompagnement de prospérité.')}`;
 ---
 
-<section id="contact" class="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-white via-mystique-encre to-white border-t border-mystique-trait/50">
+<section id="contact" class="py-24 sm:py-32 relative overflow-hidden bg-black text-white border-t border-neutral-800">
   {/* Halo Lumineux Supérieur Délicat en Rouge Sacré */}
   <div
-    class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(90vw,900px)] h-72 rounded-full pointer-events-none opacity-40 select-none"
-    style="background: radial-gradient(ellipse at 50% 0%, rgba(220, 38, 38, 0.15), transparent 70%);"
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(90vw,900px)] h-72 rounded-full pointer-events-none opacity-30 select-none"
+    style="background: radial-gradient(ellipse at 50% 0%, rgba(220, 38, 38, 0.35), transparent 70%);"
     aria-hidden="true"
   />
 
   <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-mystique-lune tracking-tight max-w-3xl mx-auto mb-6 leading-tight">
+    <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight max-w-3xl mx-auto mb-6 leading-tight">
       Votre chemin peut s’ouvrir dès aujourd'hui.
     </h2>
 
@@ -22,7 +22,7 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
       « La chance se provoque, la réussite se prépare. »
     </p>
 
-    <p class="text-mystique-brume text-base sm:text-lg font-light leading-relaxed max-w-xl mx-auto mb-10">
+    <p class="text-stone-300 text-base sm:text-lg font-light leading-relaxed max-w-xl mx-auto mb-10">
       Au Bénin ou à l’étranger, échangez avec le Marabout AKPLE en toute discrétion. Réponse directe et sans engagement.
     </p>
 
@@ -34,44 +34,21 @@ const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^
         class="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-mystique-emerald hover:bg-mystique-emeraldHover text-white font-medium tracking-wide text-base transition-all duration-300 shadow-emerald-glow hover:scale-[1.02]"
       >
         <Icons name="whatsapp" class="w-5 h-5 text-white" />
-        <span>Consulter le Marabout AKPLE sur WhatsApp</span>
+        <span>Consulter le Marabout AKPLE</span>
       </a>
 
       <a
         href={`tel:${fallbackSettings.phoneNumberBJ.replace(/\s+/g, '')}`}
-        class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-mystique-trait hover:border-mystique-accent/50 bg-white hover:bg-mystique-encre text-mystique-lune text-base font-light transition-all duration-300 shadow-sm"
+        class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-neutral-700 hover:border-neutral-500 bg-neutral-900/90 hover:bg-neutral-800 text-white text-base font-light transition-all duration-300 shadow-sm"
       >
         <Icons name="phone" class="w-4 h-4 text-mystique-accent" />
         <span>Appeler : {fallbackSettings.phoneNumberBJ}</span>
       </a>
     </div>
 
-    <div class="flex items-center justify-center gap-2 text-xs sm:text-sm text-mystique-brume mb-14">
+    <div class="flex items-center justify-center gap-2 text-xs sm:text-sm text-neutral-400">
       <Icons name="video" class="w-4 h-4 text-mystique-emerald flex-shrink-0" />
       <span>Consultations par appel vidéo WhatsApp • Possibilité d'assister à vos rituels en direct</span>
-    </div>
-
-    {/* 4 Blocs d'Informations Pratiques */}
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
-      <div class="p-5 rounded-2xl bg-white border border-mystique-trait shadow-sm">
-        <strong class="font-serif text-base text-mystique-lune block mb-1">WhatsApp Direct</strong>
-        <span class="text-xs sm:text-sm text-mystique-brume font-mono">{fallbackSettings.phoneNumberBJ}</span>
-      </div>
-
-      <div class="p-5 rounded-2xl bg-white border border-mystique-trait shadow-sm">
-        <strong class="font-serif text-base text-mystique-lune block mb-1">Appel Téléphonique</strong>
-        <span class="text-xs sm:text-sm text-mystique-brume font-mono">{fallbackSettings.phoneNumberBJ}</span>
-      </div>
-
-      <div class="p-5 rounded-2xl bg-white border border-mystique-trait shadow-sm">
-        <strong class="font-serif text-base text-mystique-lune block mb-1">Sanctuaire à Ouidah</strong>
-        <span class="text-xs sm:text-sm text-mystique-brume">Ouidah, Bénin (adresse transmise au 1er échange)</span>
-      </div>
-
-      <div class="p-5 rounded-2xl bg-white border border-mystique-trait shadow-sm">
-        <strong class="font-serif text-base text-mystique-lune block mb-1">Horaires d'Accueil</strong>
-        <span class="text-xs sm:text-sm text-mystique-brume">{fallbackSettings.hours}</span>
-      </div>
     </div>
   </div>
 </section>

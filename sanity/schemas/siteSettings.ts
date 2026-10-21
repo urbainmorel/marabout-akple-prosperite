@@ -39,7 +39,7 @@ export default defineType({
       name: 'templeAddress',
       title: 'Localisation du Temple',
       type: 'string',
-      initialValue: 'Ouidah, Bénin (cité historique du culte Vodun)',
+      initialValue: 'Bénin (berceau historique du culte Vodun)',
     }),
     defineField({
       name: 'hours',

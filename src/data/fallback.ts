@@ -56,18 +56,18 @@ export const fallbackSettings: SiteSettings = {
   experienceYears: 30,
   whatsappNumber: '+2290190871312',
   phoneNumberBJ: '+229 01 90 87 13 12',
-  templeAddress: 'Ouidah, Bénin (cité historique du Vodun)',
+  templeAddress: 'Bénin (berceau historique du Vodun)',
   hours: 'Lundi à Samedi : 08h00 - 18h00 (UTC+1)',
   siteUrl: 'https://www.grand-marabout-akple.com',
-  metaTitle: 'Cérémonies de Prospérité Vodun — Marabout AKPLE, Haut Dignitaire à Ouidah',
-  metaDescription: 'Puissants rituels ancestraux pour débloquer vos finances, attirer la chance et pérenniser l’abondance avec le Marabout AKPLE à Ouidah (Bénin) et à distance pour la diaspora.',
+  metaTitle: 'Cérémonies de Prospérité Vodun — Marabout AKPLE, Haut Dignitaire au Bénin',
+  metaDescription: 'Puissants rituels ancestraux pour débloquer vos finances, attirer la chance et pérenniser l’abondance avec le Marabout AKPLE au Bénin et à distance pour la diaspora.',
 };
 
 export const fallbackTrustMetrics = [
   {
     number: '+30 ans',
     label: 'de pratique ancestrale',
-    description: 'Une maîtrise transmise au sein d’une vraie lignée familiale à Ouidah.',
+    description: 'Une maîtrise transmise au sein d’une vraie lignée familiale au Bénin.',
   },
   {
     number: 'Des milliers',
@@ -82,7 +82,7 @@ export const fallbackTrustMetrics = [
 ];
 
 export const fallbackTrustPoints = [
-  'Savoir sacré hérité de génération en génération à Ouidah',
+  'Savoir sacré hérité de génération en génération au Bénin',
   'Secret absolu et discrétion totale pour chaque personne',
   'Rituels à distance tout aussi puissants pour la diaspora',
   'Éthique stricte : aucun rituel pour nuire, que du positif',
@@ -174,7 +174,7 @@ export const fallbackProcessSteps = [
   {
     step: '1',
     title: 'Vous nous contactez',
-    description: 'Écrivez-nous sur WhatsApp ou demandez un rendez-vous à Ouidah. Échange direct, rapide et 100 % secret.',
+    description: 'Écrivez-nous sur WhatsApp ou demandez un rendez-vous au temple. Échange direct, rapide et 100 % secret.',
   },
   {
     step: '2',
@@ -205,7 +205,7 @@ export const fallbackTargetAudience = [
 export const fallbackGallery: GalleryItem[] = [
   {
     id: 'gal-1',
-    title: 'Le Sanctuaire d’Ouidah',
+    title: 'Le Sanctuaire Ancestral',
     caption: 'Lieu traditionnel où sont réalisés vos rituels de déblocage.',
     imageWebp: '/images/hero-temple-vodun-akple.webp',
     imageJpg: '/images/hero-temple-vodun-akple.jpg',
@@ -256,9 +256,9 @@ export const fallbackGallery: GalleryItem[] = [
   {
     id: 'gal-6',
     title: 'Portail des Bénédictions',
-    caption: 'L’entrée du sanctuaire traditionnel du Marabout Akple à Ouidah.',
-    imageWebp: '/images/entree-temple-akple-ouidah-distance.webp',
-    imageJpg: '/images/entree-temple-akple-ouidah-distance.jpg',
+    caption: 'L’entrée du sanctuaire traditionnel du Marabout Akple au Bénin.',
+    imageWebp: '/images/entree-temple-akple-distance.webp',
+    imageJpg: '/images/entree-temple-akple-distance.jpg',
     width: 800,
     height: 600,
     spanClass: 'col-span-2 row-span-1',
