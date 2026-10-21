@@ -1,14 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { fallbackSettings } from '../data/fallback';
+import { generateBreadcrumbSchema } from '../utils/seo';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Accueil', url: `${fallbackSettings.siteUrl}/` },
+  { name: 'Mentions Légales', url: `${fallbackSettings.siteUrl}/mentions-legales/` },
+]);
 ---
 
 <Layout
   title={`Mentions Légales — ${fallbackSettings.practitionerName}`}
   description="Mentions légales, éditeur du site, hébergement Cloudflare et cadre déontologique du Sanctuaire Vodun Marabout AKPLE au Bénin."
+  canonical={`${fallbackSettings.siteUrl}/mentions-legales/`}
+  jsonLd={breadcrumbSchema}
 >
   <div class="py-24 sm:py-32 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <nav class="mb-8 text-sm text-slate-600 font-medium">
+    <nav class="mb-8 text-sm text-slate-600 font-medium" aria-label="Fil d'Ariane">
       <a href="/" class="hover:text-mystique-lune transition-colors">Accueil</a>
       <span class="mx-2">/</span>
       <span class="text-mystique-accent">Mentions Légales</span>

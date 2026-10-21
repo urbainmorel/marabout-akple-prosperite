@@ -1,0 +1,21 @@
+{
+  "name": "Sanctuaire Vodun Marabout AKPLE",
+  "short_name": "Marabout AKPLE",
+  "description": "Cérémonies de prospérité Vodun au Bénin et rituels sacrés pour débloquer finances et réussite.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F17",
+  "theme_color": "#0B0F17",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,14 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { fallbackSettings } from '../data/fallback';
+import { generateBreadcrumbSchema } from '../utils/seo';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Accueil', url: `${fallbackSettings.siteUrl}/` },
+  { name: 'Politique de Confidentialité', url: `${fallbackSettings.siteUrl}/politique-confidentialite/` },
+]);
 ---
 
 <Layout
   title={`Politique de Confidentialité — ${fallbackSettings.practitionerName}`}
   description="Politique de protection des données, secret initiatique et confidentialité absolue pour les consultations du Sanctuaire Vodun Marabout AKPLE."
+  canonical={`${fallbackSettings.siteUrl}/politique-confidentialite/`}
+  jsonLd={breadcrumbSchema}
 >
   <div class="py-24 sm:py-32 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <nav class="mb-8 text-sm text-slate-600 font-medium">
+    <nav class="mb-8 text-sm text-slate-600 font-medium" aria-label="Fil d'Ariane">
       <a href="/" class="hover:text-mystique-lune transition-colors">Accueil</a>
       <span class="mx-2">/</span>
       <span class="text-mystique-accent">Politique de Confidentialité</span>

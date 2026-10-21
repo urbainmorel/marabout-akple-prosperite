@@ -1,0 +1,4 @@
+# Redirections 301 canoniques vers trailing slash
+/mentions-legales /mentions-legales/ 301
+/politique-confidentialite /politique-confidentialite/ 301
+/conditions-generales /conditions-generales/ 301

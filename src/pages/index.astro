@@ -21,6 +21,7 @@ const faqSchema = generateFaqSchema();
 <Layout
   title={settings.metaTitle}
   description={settings.metaDescription}
+  canonical={`${settings.siteUrl}/`}
   jsonLd={faqSchema}
 >
   <Hero />

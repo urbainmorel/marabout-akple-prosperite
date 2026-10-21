@@ -4,7 +4,11 @@ import Footer from '../components/Footer.astro';
 import WhatsAppSticky from '../components/WhatsAppSticky.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import Analytics from '../components/Analytics.astro';
-import { generateProfessionalServiceSchema, generateWebSiteSchema } from '../utils/seo';
+import {
+  generatePersonSchema,
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+} from '../utils/seo';
 import { fallbackSettings } from '../data/fallback';
 
 interface Props {
@@ -18,18 +22,33 @@ interface Props {
 const {
   title = fallbackSettings.metaTitle,
   description = fallbackSettings.metaDescription,
-  canonical = Astro.url.href,
+  canonical,
   ogImage = `${fallbackSettings.siteUrl}/images/og-image.jpg`,
   jsonLd,
 } = Astro.props;
 
 const siteUrl = fallbackSettings.siteUrl;
-const fullCanonical = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`;
-const defaultOrgSchema = generateProfessionalServiceSchema(fullCanonical);
+
+// Normalisation rigoureuse de l'URL canonique avec trailing slash
+const currentPath = Astro.url.pathname;
+const rawCanonical = canonical || new URL(currentPath, siteUrl).href;
+const fullCanonical = rawCanonical.startsWith('http')
+  ? rawCanonical
+  : new URL(rawCanonical, siteUrl).href;
+const normalizedCanonical =
+  fullCanonical.endsWith('/') || fullCanonical.includes('.')
+    ? fullCanonical
+    : `${fullCanonical}/`;
+
+const isHomepage = currentPath === '/' || currentPath === '';
+
+const defaultPersonSchema = generatePersonSchema(siteUrl);
 const defaultSiteSchema = generateWebSiteSchema(siteUrl);
+const defaultOrgSchema = generateProfessionalServiceSchema(normalizedCanonical);
 
 const schemasToRender = [
   defaultSiteSchema,
+  defaultPersonSchema,
   defaultOrgSchema,
   ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []),
 ];
@@ -43,14 +62,15 @@ const schemasToRender = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0B0F17" />
+    <meta name="msapplication-TileColor" content="#0B0F17" />
     <meta name="generator" content={Astro.generator} />
 
     {/* SEO Fondamental & Indexation */}
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={fullCanonical} />
+    <link rel="canonical" href={normalizedCanonical} />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
     {/* Open Graph / Réseaux Sociaux */}
@@ -58,10 +78,11 @@ const schemasToRender = [
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:url" content={normalizedCanonical} />
     <meta property="og:site_name" content="Sanctuaire Vodun Marabout AKPLE" />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Sanctuaire Vodun Marabout AKPLE — Cérémonies de Prospérité et d'Abondance" />
@@ -71,16 +92,41 @@ const schemasToRender = [
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Sanctuaire Vodun Marabout AKPLE — Cérémonies de Prospérité et d'Abondance" />
 
-    {/* Google Fonts Typographie Mystique : Cormorant Garamond & Manrope */}
+    {/* Preload Image Hero LCP (Page d'accueil) */}
+    {isHomepage && (
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-temple-vodun-akple.webp"
+        type="image/webp"
+        fetchpriority="high"
+      />
+    )}
+
+    {/* Google Fonts Typographie Mystique Optimisée non-bloquante */}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
-    {/* Schémas JSON-LD Schema.org */}
+    {/* Schémas JSON-LD Schema.org interconnectés (EEAT & AEO) */}
     {schemasToRender.map((schema) => (
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}

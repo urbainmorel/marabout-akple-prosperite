@@ -9,6 +9,7 @@ const dataset = process.env.PUBLIC_SANITY_DATASET || 'production';
 export default defineConfig({
   site: 'https://www.grand-marabout-akple.com',
   output: 'static',
+  trailingSlash: 'always',
   integrations: [
     react(),
     tailwind(),
