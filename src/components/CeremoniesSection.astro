@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { ceremonies } = Astro.props;
-const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Marabout AKPLE, je souhaite ouvrir mes chemins et solliciter une consultation de prospérité.')}`;
+const whatsappUrl = `https://wa.me/${fallbackSettings.whatsappNumber.replace(/[^0-9]/g, '')}`;
 ---
 
 <section id="ceremonies" class="py-20 sm:py-28 relative bg-white">
