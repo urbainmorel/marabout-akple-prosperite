@@ -2,6 +2,10 @@ import type { APIRoute } from 'astro';
 import { fallbackSettings, fallbackCeremonies } from '../data/fallback';
 
 export const GET: APIRoute = async () => {
+  if (import.meta.env.PUBLIC_NO_INDEX === 'true') {
+    return new Response(null, { status: 404, statusText: 'Not Found' });
+  }
+
   const siteUrl = fallbackSettings.siteUrl;
   const today = new Date().toISOString().split('T')[0];
 
