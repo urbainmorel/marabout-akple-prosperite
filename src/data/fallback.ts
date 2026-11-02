@@ -50,6 +50,11 @@ export interface GalleryItem {
   spanClass: string;
 }
 
+const SITE_URL =
+  (typeof process !== 'undefined' && process.env?.PUBLIC_SITE_URL) ||
+  (typeof import.meta !== 'undefined' && (import.meta as any).env?.PUBLIC_SITE_URL) ||
+  'https://maitre-spirituel-akple.pages.dev';
+
 export const fallbackSettings: SiteSettings = {
   practitionerName: 'Marabout AKPLE',
   practitionerTitle: 'Haut Dignitaire du Culte Vodun',
@@ -58,7 +63,7 @@ export const fallbackSettings: SiteSettings = {
   phoneNumberBJ: '+33 7 74 40 72 20',
   templeAddress: 'Bénin (berceau historique du Vodun)',
   hours: 'Lundi à Samedi : 08h00 - 18h00 (UTC+1)',
-  siteUrl: 'https://www.grand-marabout-akple.com',
+  siteUrl: SITE_URL,
   metaTitle: 'Cérémonies de Prospérité Vodun — Marabout AKPLE, Haut Dignitaire au Bénin',
   metaDescription: 'Puissants rituels ancestraux pour débloquer vos finances, attirer la chance et pérenniser l’abondance avec le Marabout AKPLE au Bénin et à distance pour la diaspora.',
 };

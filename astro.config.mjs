@@ -47,7 +47,7 @@ const noIndexIntegration = () => ({
 });
 
 export default defineConfig({
-  site: 'https://www.grand-marabout-akple.com',
+  site: process.env.PUBLIC_SITE_URL || 'https://maitre-spirituel-akple.pages.dev',
   output: 'static',
   trailingSlash: 'always',
   integrations: [
