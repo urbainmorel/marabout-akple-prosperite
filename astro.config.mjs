@@ -21,8 +21,19 @@ const noIndexIntegration = () => ({
       if (isNoIndexBuild) {
         const outDir = fileURLToPath(dir);
 
-        // 1. Robots.txt : Bloquer strictement tous les moteurs et crawlers
-        const robotsTxt = 'User-agent: *\nDisallow: /\n';
+        // 1. Robots.txt : Bloquer tous les moteurs de recherche tout en autorisant les crawlers Google Ads
+        const robotsTxt = `User-agent: *
+Disallow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+`;
         await fs.writeFile(path.join(outDir, 'robots.txt'), robotsTxt, 'utf-8');
 
         // 2. _headers : Passer X-Robots-Tag à noindex, nofollow, noarchive
