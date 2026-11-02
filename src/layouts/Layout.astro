@@ -71,7 +71,10 @@ const schemasToRender = [
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={normalizedCanonical} />
-    {import.meta.env.PUBLIC_NO_INDEX === 'true' ? (
+    {import.meta.env.PUBLIC_NO_INDEX === 'true' ||
+    import.meta.env.CF_PAGES_BRANCH === 'ads' ||
+    (typeof process !== 'undefined' && process.env?.CF_PAGES_BRANCH === 'ads') ||
+    (typeof process !== 'undefined' && process.env?.CF_PAGES_URL?.includes('maitre-spirituel-akple')) ? (
       <meta name="robots" content="noindex, nofollow, noarchive" />
     ) : (
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

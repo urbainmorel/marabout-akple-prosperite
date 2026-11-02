@@ -9,11 +9,16 @@ import path from 'node:path';
 const projectId = process.env.PUBLIC_SANITY_PROJECT_ID || 'akple-prosperite';
 const dataset = process.env.PUBLIC_SANITY_DATASET || 'production';
 
+const isNoIndexBuild =
+  process.env.PUBLIC_NO_INDEX === 'true' ||
+  process.env.CF_PAGES_BRANCH === 'ads' ||
+  Boolean(process.env.CF_PAGES_URL && process.env.CF_PAGES_URL.includes('maitre-spirituel-akple'));
+
 const noIndexIntegration = () => ({
   name: 'noindex-protection',
   hooks: {
     'astro:build:done': async ({ dir }) => {
-      if (process.env.PUBLIC_NO_INDEX === 'true') {
+      if (isNoIndexBuild) {
         const outDir = fileURLToPath(dir);
 
         // 1. Robots.txt : Bloquer strictement tous les moteurs et crawlers
