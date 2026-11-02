@@ -58,7 +58,7 @@ Allow: /
 });
 
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || 'https://maitre-spirituel-akple.pages.dev',
+  site: process.env.PUBLIC_SITE_URL || 'https://www.maitre-spirituel-akple.site',
   output: 'static',
   trailingSlash: 'always',
   integrations: [

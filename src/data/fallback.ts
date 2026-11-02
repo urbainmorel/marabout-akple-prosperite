@@ -53,7 +53,7 @@ export interface GalleryItem {
 const SITE_URL =
   (typeof process !== 'undefined' && process.env?.PUBLIC_SITE_URL) ||
   (typeof import.meta !== 'undefined' && (import.meta as any).env?.PUBLIC_SITE_URL) ||
-  'https://maitre-spirituel-akple.pages.dev';
+  'https://www.maitre-spirituel-akple.site';
 
 export const fallbackSettings: SiteSettings = {
   practitionerName: 'Marabout AKPLE',
