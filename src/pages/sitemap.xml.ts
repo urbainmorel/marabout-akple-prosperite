@@ -1,18 +1,8 @@
 import type { APIRoute } from 'astro';
-import { fallbackSettings, fallbackCeremonies } from '../data/fallback';
 
 export const GET: APIRoute = async () => {
-  const isNoIndex =
-    import.meta.env.PUBLIC_NO_INDEX === 'true' ||
-    import.meta.env.CF_PAGES_BRANCH === 'ads' ||
-    (typeof process !== 'undefined' && process.env?.CF_PAGES_BRANCH === 'ads') ||
-    (typeof process !== 'undefined' && process.env?.CF_PAGES_URL?.includes('maitre-spirituel-akple'));
-
-  if (isNoIndex) {
-    return new Response(null, { status: 404, statusText: 'Not Found' });
-  }
-
-  const siteUrl = fallbackSettings.siteUrl;
+  return new Response(null, { status: 404, statusText: 'Not Found' });
+};
   const today = new Date().toISOString().split('T')[0];
 
   const homepageImages = [

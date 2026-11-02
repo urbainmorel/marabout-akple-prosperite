@@ -67,18 +67,11 @@ const schemasToRender = [
     <meta name="msapplication-TileColor" content="#0B0F17" />
     <meta name="generator" content={Astro.generator} />
 
-    {/* SEO Fondamental & Indexation */}
+    {/* SEO Fondamental & Indexation — Bloqué pour site publicitaire Ads */}
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={normalizedCanonical} />
-    {import.meta.env.PUBLIC_NO_INDEX === 'true' ||
-    import.meta.env.CF_PAGES_BRANCH === 'ads' ||
-    (typeof process !== 'undefined' && process.env?.CF_PAGES_BRANCH === 'ads') ||
-    (typeof process !== 'undefined' && process.env?.CF_PAGES_URL?.includes('maitre-spirituel-akple')) ? (
-      <meta name="robots" content="noindex, nofollow, noarchive" />
-    ) : (
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    )}
+    <meta name="robots" content="noindex, nofollow, noarchive" />
 
     {/* Open Graph / Réseaux Sociaux */}
     <meta property="og:locale" content="fr_FR" />
